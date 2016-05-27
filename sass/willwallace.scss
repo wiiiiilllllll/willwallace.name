@@ -1,7 +1,10 @@
 // willwallace.name
 // main stylesheet
-// (cc) 2016
+// 2016, MIT License
 
-html {
-	font-family: sans-serif;
-}
+@import "base/normalise";
+@import "base/variables";
+@import "base/typography";
+@import "base/global";
+
+@import "components/header";
