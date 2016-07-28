@@ -7,22 +7,29 @@
 @charset "utf-8";
 
 // Settings
-@import "settings/variables";
+@import "1_settings/variables";
+@import "1_settings/mixins";
+@import "1_settings/grid";
 
 // Generic
-@import "generic/normalise";
-@import "generic/typography";
-@import "generic/global";
+@import "2_generic/normalise";
+@import "2_generic/typography";
+@import "2_generic/global";
 
 // Elements
-@import "elements/footer";
-@import "elements/header";
-@import "elements/main";
+@import "3_elements/footer";
 
 // Objects
-@import "objects/icon";
+@import "4_objects/icon";
+@import "4_objects/header";
+@import "4_objects/aspect-ratio";
 
 // Components
+@import "5_components/masthead";
+@import "5_components/hero";
+@import "5_components/tile";
+@import "5_components/main";
+@import "5_components/post";
 
 // Vendor (if necessary)
 

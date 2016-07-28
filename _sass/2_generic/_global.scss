@@ -1,0 +1,29 @@
+// Global
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	background-color: $paper;
+	// background-color: $shark;
+}
+
+img {
+	max-width: 100%;
+}
+
+.b-lazy {
+	opacity: 0;
+	transition: opacity .5s ease .2s;
+
+	&.b-loaded {
+		opacity: 1;
+	}
+}
+
+.caps {
+	display: block;
+	margin-top: 1em;
+	text-transform: uppercase;
+}

@@ -1,0 +1,134 @@
+// Tile
+// aka a flexbox grid of boxes
+
+// First, the container
+.tile-container {
+	@include unstyled;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+// Now, the tile itself
+.tile {
+	background-color: $paper;
+	min-height: $t*9;
+	text-decoration: inherit;
+	width: 33.333%;
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+	// Padding for tiles which only contain text
+	&--text {
+		padding: 1em;
+	}
+
+	// Blank tiles are inserted every so often to make the grid look pretty
+	&--blank {
+		background-color: $shark;
+	}
+
+	// Contains two tiles next to each other
+	&--two {
+		overflow: hidden;
+		text-align: right;
+		width: 66.667%;
+
+		// Contents must be floated
+		.tile__inner,
+		.tile__image {
+			float: left;
+			width: 50%;
+		}
+
+		.tile__inner:after {
+			border-left-color: $paper !important;
+		}
+	}
+
+	// Occasionally tiles have a different background-colour
+	&--highlight {
+		background-color: $highlight;
+
+		&:hover {
+			color: $paper !important;
+		}
+
+		.tile__inner:after {
+			border-left-color: $highlight !important;
+		}
+	}
+
+	// Occasionally tile--two is reversed right-left
+	&--reverse {
+		text-align: left;
+
+		.tile__inner,
+		.tile__image {
+			float: right;
+		}
+
+		.tile__inner:before {
+			border-right-color: $paper !important;
+		}
+	}
+}
+
+// Contains text, sits inside a tile
+.tile__inner {
+	padding: 1em;
+
+	.tile--two & {
+		position: relative;
+
+		&:before,
+		&:after {
+			border: 1em solid transparent;
+			content: '';
+			height: 0;
+			position: absolute;
+			top: 1em;
+			width: 0;
+			z-index: 999;
+		}
+
+		&:before {
+			right: 100%;
+		}
+
+		&:after {
+			left: 100%;
+		}
+	}
+}
+
+.tile__small {
+	text-transform: uppercase;
+}
+
+// <img>
+.tile__image {
+	opacity: 1;
+	transition: opacity .3s ease;
+
+	.tile:hover & {
+		opacity: 0.5;
+	}
+}
+
+// <h4>
+.tile__client {
+	margin-bottom: 0;
+}
+
+.tile__small,
+.tile__inner,
+.tile__client {
+	text-decoration: inherit;
+}
+
+// Hide lazy-load image containers if JavaScript is not available
+.no-js .b-lazy {
+	display: none;
+}

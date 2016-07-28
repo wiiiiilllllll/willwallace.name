@@ -1,0 +1,31 @@
+// Typography
+
+html {
+	color: $shark;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin-top: 0;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	transition: color 0.2s ease;
+
+	&:link {}
+	&:visited {}
+	&:hover {
+		color: $highlight;
+		text-decoration: underline;
+	}
+	&:active {text-decoration: none}
+}

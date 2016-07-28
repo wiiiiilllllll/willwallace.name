@@ -1,0 +1,55 @@
+// Masthead
+// Main site header
+
+.masthead {
+	background-color: $shark;
+	color: $paper;
+	padding: 2em;
+
+	@media only screen and (min-width: 750px) {
+		@include columns(3);
+		min-height: 100vh;
+		position: fixed;
+	}
+}
+
+.masthead__logo {
+	
+	svg {
+		fill: $paper;
+		max-width: 4em;
+		transition: fill 0.2s ease;
+
+		@media only screen and (min-width: 750px) {
+			display: inline-block;
+		}
+	}
+
+	&:hover {
+
+		&:after {
+			content: 'Home';
+			font-size: 1em;
+		}
+
+		svg {
+			fill: $highlight;
+		}
+	}
+}
+
+.masthead__title {
+	display: inline;
+	margin-top: 1em;
+
+	@media only screen and (min-width: 750px) {
+		display: block;
+		margin-top: 4em;
+	}
+}
+
+.masthead__tagline,
+.masthead__link {
+	font-size: 0.75em;
+}
+

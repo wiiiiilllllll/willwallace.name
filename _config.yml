@@ -18,7 +18,17 @@ github_username:  wiiiiilllllll
 
 # Build settings
 markdown: kramdown
-
-# Sass settings
 sass:
   style: compressed
+
+# Minibundle plugin
+# gems: ['jekyll/minibundle']
+# minibundle:
+#   minifier_commands:
+#     js: /usr/local/lib/node_modules/uglify-js
+
+# Misc
+collections:
+  case-studies:
+    output: true
+    permalink: /case-studies/:path/

@@ -1,0 +1,31 @@
+// Post
+// Currently a case-study, potentially a blog post
+// (who am I kidding, there won't be any blog posts)
+
+.post {
+
+}
+
+.post__content {
+	line-height: 1.4;
+	
+	> * {
+		margin-bottom: 2em;
+	}
+
+	p {
+		max-width: 65ch;
+	}
+
+	h2 {
+		margin-bottom: 0;
+	}
+
+	figure {
+		margin: 0;
+	}
+
+	.tile-container {
+		margin-bottom: 2em;
+	}
+}

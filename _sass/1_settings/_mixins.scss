@@ -1,0 +1,19 @@
+// Mixins
+
+// Unstyled lists
+@mixin unstyled {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+
+
+// Grid
+@mixin columns($col) {
+	float: left;
+	margin: 0;
+	width: ($col * $column);
+}
