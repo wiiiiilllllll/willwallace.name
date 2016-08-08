@@ -5,11 +5,19 @@
 	background-color: $shark;
 	color: $paper;
 	padding: 2em;
+	
+	.body--home & {
+		position: absolute;
+		left: 0;
+		right: 0;
+		z-index: 9;
+	}
 
 	@media only screen and (min-width: 750px) {
 		@include columns(3);
 		min-height: 100vh;
 		position: fixed;
+		right: auto;
 	}
 }
 

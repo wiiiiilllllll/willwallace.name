@@ -1,7 +1,7 @@
 ---
 layout: case-study
 client: St. James's Place
-job: Insights
+job: Front-end development
 title: St. James's Place Insights
 date: 2016-05-31
 categories: case-study sjp web dev

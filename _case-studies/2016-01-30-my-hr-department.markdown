@@ -1,6 +1,7 @@
 ---
 layout: case-study
 client: myHRdepartment
+job: Web design & development
 title: Website
 date: 2016-01-30
 categories: case-study web dev design myhr

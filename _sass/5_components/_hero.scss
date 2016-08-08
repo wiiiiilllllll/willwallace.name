@@ -26,18 +26,7 @@
 	}
 
 	&:hover {
-		color: $paper;
-		text-decoration: underline;
+		// color: $paper;
+		// text-decoration: underline;
 	}
-}
-
-.hero__second {
-	background-color: $paper;
-	bottom: 0;
-	position: absolute;
-	width: 66.667%;
-
-	// .tile {
-	// 	float: left;
-	// }
 }

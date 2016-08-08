@@ -1,6 +1,7 @@
 ---
 layout: case-study
 client: Yoh
+job: Web design & development
 title: The Agile Portal
 date: 2016-03-06
 categories: case-study web dev design yoh

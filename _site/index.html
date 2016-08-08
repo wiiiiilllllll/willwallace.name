@@ -4,113 +4,216 @@
 <html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product" prefix="og: http://ogp.me/ns/article#">
 <!--<![endif]-->
 
-  {% include head.html %}
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Will Wallace</title>
+	<meta name="description" content="Will Wallace is a freelance graphic designer and front-end web developer based in Reading, UK.
+">
+
+	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,600' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/css/willwallace.css">
+	<link rel="canonical" href="http://willwallace.name/">
+	<link rel="alternate" type="application/rss+xml" title="Will Wallace" href="http://willwallace.name/feed.xml">
+	<script>
+		if ('querySelector' in document && 'addEventListener' in window) {
+		  document.write('<script src="/js/willwallace.min.js" defer><\/script>');
+		}
+	</script>
+</head>
 
   <body class="body--home">
 
-    {% include header.html %}
+    <header class="masthead">
+
+  <a href="/" class="masthead__logo">
+    <svg viewBox="0 0 482 284" xmlns="http://www.w3.org/2000/svg">
+	<path d="M78.835 0l97.34 283.465H97.34L0 0h78.835zM203.933 0l97.341 283.465h-78.835L125.099 0h78.834zM384.55 283.465h-78.835L403.055 0h78.835l-97.34 283.465z"/>
+</svg>
+
+  </a>
+
+  <h1 class="masthead__title">
+    Will Wallace
+  </h1>
+
+  <p class="masthead__tagline">Graphic design & front-end development</p>
+
+  <a href="mailto:info@willwallace.name" class="masthead__link">info@willwallace.name</a>
+
+</header>
 
     <main class="main">
+      
 
-      {% comment %}
-      CONTENT BEGINS
-      {% endcomment %}
 
-      {% assign items = site.case-studies | sort: 'date' | reverse %}
-      {% for item in items limit:1 %}
-      <div class="hero parallax b-lazy" data-src="{{ item.image }}">
-      {% endfor %}
-      {% for item in items limit:1 %}
-        <a href="{{ item.url }}" class="hero__first">
-            <div class="tile tile--text y2 x3 tile--highlight">
-              <h3 class="tile__title">{{ item.client }}</h3>
-              {{ item.title }}
-            </div>
-            {% if item.image %}
-              <noscript>
-                <img src="{{ item.image }}" alt="Thumbnail for {{ item.title }}" class="hero__first__image">
-              </noscript>
-            {% else %}
-              <noscript>
-                <img src="http://fillmurray.com/400/300" alt="Thumbnail for {{ item.title }}" class="hero__first__image">
-              </noscript>
-            {% endif %}
-        </a>
-        {% endfor %}
 
-        {% for item in items offset:1 limit:1 %}
-        <div class="hero__second">
-          <a href="{{ item.url }}" class="tile tile--two">
-            <div class="tile__inner">
-              <small class="tile__small">Case study</small>
-              <h3 class="tile__client">{{ item.client }}</h3>
-              <p class="tile__title">{{ item.title }}</p>
-            </div>
-            {% if item.thumbnail %}
-              <img src="{% include src %}" data-src="{{ item.thumbnail }}" alt="Thumbnail for {{ item.title }}" class="b-lazy tile__image">
-              <noscript>
-                <img src="{{ item.thumbnail }}" alt="Thumbnail for {{ item.title }}">
-              </noscript>
-            {% endif %}
-          </a>
+<div class="hero parallax b-lazy" data-src="/images/large/lipstick-on-your-collar-identity.jpg">
+
+  
+    <a href="/case-studies/2016-07-20-lipstick-on-your-collar-display/" class="hero__first">
+        <div class="tile tile--text y2 x3 tile--highlight">
+          <h3 class="tile__title">Lipstick On Your Collar</h3>
+          Brand & display advertising
         </div>
-        {% endfor %}
+        
+          <noscript>
+            <img src="/images/large/lipstick-on-your-collar-identity.jpg" alt="Thumbnail for Lipstick On Your Collar tour poster" class="hero__first__image">
+          </noscript>
+        
+    </a>
+  
+</div>
 
+<div class="tile-container tile-wall">
+  
+  
+    <a href="/case-studies/2016-07-02-aubrey-dye-identity/" class="tile">
+      <div class="tile__inner">
+        <!-- <small class="tile__small">Case study</small> -->
+        <h3 class="tile__client">Aubrey Dye-Welch Hypnotherapy</h3>
+        <p class="tile__title">Identity design</p>
       </div>
-
-      <div class="tile-container">
-        {% assign items = site.case-studies | sort: 'date' | reverse %}
-        {% for item in items offset:2 %}
-
-          {% assign tile = "tile" %}
-          {% assign void = false %}
-          {% assign double = "" %}
-          {% assign highlight = "" %}
-          {% assign reverse = "" %}
-
-          {% case forloop.index %}
-            {% when 1 or 6 or 10 %}
-              {% assign void = true %}
-            {% when 2 or 3 or 5 or 8 %}
-              {% assign double = " tile--two" %}
-            {% when 3 or 8 or 9 %}
-              {% assign highlight = " tile--highlight" %}
-            {% when 5 %}
-              {% assign reverse = " tile--reverse" %}
-          {% endcase %}
-
-          {% capture class %}{{tile}}{{double}}{{highlight}}{{reverse}}{% endcapture %}
-
-          {% if void %}
-            <div class="tile tile--blank">&nbsp;</div>
-          {% else %}
-            <a href="{{ item.url }}" class="{{ class }}">
-              <div class="tile__inner">
-                <small class="tile__small">Case study</small>
-                <h3 class="tile__client">{{ item.client }}</h3>
-                <p class="tile__title">{{ item.title }}</p>
-                {% if double == "" %}
-
-                {% endif %}
-              </div>
-              {% if double != "" %}
-                {% if item.thumbnail %}
-                  <img src="{% include src %}" data-src="{{ item.thumbnail }}" alt="Thumbnail for {{ item.title }}" class="b-lazy tile__image">
-                  <noscript>
-                    <img src="{{ item.thumbnail }}" alt="Thumbnail for {{ item.title }}">
-                  </noscript>
-                {% endif %}
-              {% endif %}
-            </a>
-          {% endif %}
-        {% endfor %}
+      
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/images/thumbnails/aubrey-dye-welch-identity.jpg" alt="Thumbnail for Aubrey Dye-Welch Hypnotherapy" class="b-lazy tile__image">
+        <noscript>
+          <img src="/images/thumbnails/aubrey-dye-welch-identity.jpg" alt="Thumbnail for Aubrey Dye-Welch Hypnotherapy">
+        </noscript>
+      
+    </a>
+  
+    <a href="/case-studies/2016-06-21-mavericks-heroes/" class="tile">
+      <div class="tile__inner">
+        <!-- <small class="tile__small">Case study</small> -->
+        <h3 class="tile__client">The Mavericks Brewing Company</h3>
+        <p class="tile__title">Brand & packaging design</p>
       </div>
-
-      {% comment %}
-      CONTENT BEGINS
-      {% endcomment %}
+      
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/images/thumbnails/mavericks-heroes.jpg" alt="Thumbnail for The Mavericks Brewing Company" class="b-lazy tile__image">
+        <noscript>
+          <img src="/images/thumbnails/mavericks-heroes.jpg" alt="Thumbnail for The Mavericks Brewing Company">
+        </noscript>
+      
+    </a>
+  
+    <a href="/case-studies/2016-05-31-st-james-place-insights/" class="tile">
+      <div class="tile__inner">
+        <!-- <small class="tile__small">Case study</small> -->
+        <h3 class="tile__client">St. James's Place</h3>
+        <p class="tile__title">Front-end development</p>
+      </div>
+      
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/images/thumbnails/sjp-insights.jpg" alt="Thumbnail for St. James's Place Insights" class="b-lazy tile__image">
+        <noscript>
+          <img src="/images/thumbnails/sjp-insights.jpg" alt="Thumbnail for St. James's Place Insights">
+        </noscript>
+      
+    </a>
+  
+    <a href="/case-studies/2016-05-30-city-financial-redesign/" class="tile">
+      <div class="tile__inner">
+        <!-- <small class="tile__small">Case study</small> -->
+        <h3 class="tile__client">City Financial</h3>
+        <p class="tile__title">Website design</p>
+      </div>
+      
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/images/thumbnails/cf-corporate.jpg" alt="Thumbnail for City Financial website" class="b-lazy tile__image">
+        <noscript>
+          <img src="/images/thumbnails/cf-corporate.jpg" alt="Thumbnail for City Financial website">
+        </noscript>
+      
+    </a>
+  
+    <a href="/case-studies/2016-04-12-siteset-digital-redesign/" class="tile">
+      <div class="tile__inner">
+        <!-- <small class="tile__small">Case study</small> -->
+        <h3 class="tile__client">Siteset Digital</h3>
+        <p class="tile__title">Web design & development</p>
+      </div>
+      
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/images/thumbnails/siteset-site.jpg" alt="Thumbnail for Siteset Digital website" class="b-lazy tile__image">
+        <noscript>
+          <img src="/images/thumbnails/siteset-site.jpg" alt="Thumbnail for Siteset Digital website">
+        </noscript>
+      
+    </a>
+  
+    <a href="/case-studies/2016-03-06-yoh-agile-portal/" class="tile">
+      <div class="tile__inner">
+        <!-- <small class="tile__small">Case study</small> -->
+        <h3 class="tile__client">Yoh</h3>
+        <p class="tile__title">Web design & development</p>
+      </div>
+      
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/images/thumbnails/yoh-agile-portal.jpg" alt="Thumbnail for The Agile Portal" class="b-lazy tile__image">
+        <noscript>
+          <img src="/images/thumbnails/yoh-agile-portal.jpg" alt="Thumbnail for The Agile Portal">
+        </noscript>
+      
+    </a>
+  
+    <a href="/case-studies/2016-02-24-harvest-moon-ball/" class="tile">
+      <div class="tile__inner">
+        <!-- <small class="tile__small">Case study</small> -->
+        <h3 class="tile__client">Germain Financial Associates</h3>
+        <p class="tile__title">Web design & development</p>
+      </div>
+      
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/images/thumbnails/hm-harvestmoon.jpg" alt="Thumbnail for The Harvest Moon Ball" class="b-lazy tile__image">
+        <noscript>
+          <img src="/images/thumbnails/hm-harvestmoon.jpg" alt="Thumbnail for The Harvest Moon Ball">
+        </noscript>
+      
+    </a>
+  
+    <a href="/case-studies/2016-02-15-dynamic-planner/" class="tile">
+      <div class="tile__inner">
+        <!-- <small class="tile__small">Case study</small> -->
+        <h3 class="tile__client">Dynamic Planner</h3>
+        <p class="tile__title">Web design & development</p>
+      </div>
+      
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/images/thumbnails/dp-dynamicplanner.jpg" alt="Thumbnail for Website" class="b-lazy tile__image">
+        <noscript>
+          <img src="/images/thumbnails/dp-dynamicplanner.jpg" alt="Thumbnail for Website">
+        </noscript>
+      
+    </a>
+  
+    <a href="/case-studies/2016-01-30-my-hr-department/" class="tile">
+      <div class="tile__inner">
+        <!-- <small class="tile__small">Case study</small> -->
+        <h3 class="tile__client">myHRdepartment</h3>
+        <p class="tile__title">Web design & development</p>
+      </div>
+      
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/images/thumbnails/myhr-site.jpg" alt="Thumbnail for Website" class="b-lazy tile__image">
+        <noscript>
+          <img src="/images/thumbnails/myhr-site.jpg" alt="Thumbnail for Website">
+        </noscript>
+      
+    </a>
+  
+    <a href="/case-studies/2016-01-10-lake-of-kings-lotus/" class="tile">
+      <div class="tile__inner">
+        <!-- <small class="tile__small">Case study</small> -->
+        <h3 class="tile__client">Lake Of Kings</h3>
+        <p class="tile__title">Packaging design</p>
+      </div>
+      
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/images/thumbnails/myhr-site.jpg" alt="Thumbnail for Lotus" class="b-lazy tile__image">
+        <noscript>
+          <img src="/images/thumbnails/myhr-site.jpg" alt="Thumbnail for Lotus">
+        </noscript>
+      
+    </a>
+  
+</div>
 
     </main>
-  <script src="/js/willwallace.js"></script>
+  
   </body>
+
 </html>

@@ -1,7 +1,8 @@
 ---
 layout: case-study
 client: Siteset Digital
-title: Website
+job: Web design & development
+title: Siteset Digital website
 date: 2016-04-12
 categories: case-study web dev design siteset
 image: /images/large/siteset-site.jpg

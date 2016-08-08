@@ -1,0 +1,264 @@
+// Tile wall
+// Only appears on the homepage
+// 1. Mixins
+// 2. Grey shading to differentiate tiles
+// 3. Application of mixins
+
+// ////////////////////
+// 1. Mixins
+@mixin tile--wide {
+	width: 66.666%;
+
+	.tile__image,
+	.tile__inner {
+		float: left;
+		width: 50%;
+	}
+
+	.tile__inner:before {
+		display: none;
+	}
+
+	.tile__inner:after {
+		// border-left-color: $paper;
+		border-top-color: transparent;
+		border-right-color: transparent;
+		border-bottom-color: transparent;
+		// border-left-color: transparent;
+		left: 100%;
+	}
+}
+
+@mixin tile--wide--reverse {
+	.tile__inner {
+		float: right;
+	}
+
+	.tile__inner:before {
+		display: block;
+		right: 100%;
+		// border-right-color: $paper
+		border-top-color: transparent;
+		// border-right-color: transparent;
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+	}
+
+	.tile__inner:after {
+		display: none;
+	}
+}
+
+@mixin tile--tall {
+	height:$t*18;
+	width: 33.333%;
+
+	.tile__inner {
+		height: $t*9;
+	}
+
+	.tile__inner:before {
+		display: none;
+	}
+
+	.tile__inner:after {
+		// border-top-color: $paper;
+		// border-top-color: transparent;
+		border-right-color: transparent;
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+		top: 100%;
+	}
+}
+
+@mixin tile--tall--reverse {}
+
+@mixin tile--enorme {
+	height: $t*18;
+	width: 66.666%;
+
+	.tile__inner,
+	.tile__image {
+		float: left;
+		height: $t*18;
+	}
+
+	.tile__inner {
+		color: $paper;
+		position: absolute;
+
+		small, h3, p {
+			background-color: $shark;
+			display: block;
+			padding-left: .25em;
+			padding-right: .25em;
+		}
+
+		&:before,
+		&:after {
+			display: none;
+		}
+	}
+}
+
+@mixin tile--enorme--reverse {
+	.tile__inner {
+		float: right;
+	}
+}
+
+
+
+
+
+// ////////////////////
+// 2. Grey shading to differentiate tiles
+
+.tile-wall .tile {
+	&:nth-child(3n+1) {
+		$bg: $paper;
+		background-color: $bg;
+
+		.tile__inner:before,
+		.tile__inner:after {
+			border-color: $bg;
+		}
+	}
+
+	&:nth-child(3n+2) {
+		$bg: mix($shark, $paper, 2.5%);
+		background-color: $bg;
+
+		.tile__inner:before,
+		.tile__inner:after {
+			border-color: $bg;
+		}
+	}
+
+	&:nth-child(3n+3) {
+		$bg: mix($shark, $paper, 5%);
+		background-color: $bg;
+
+		.tile__inner:before,
+		.tile__inner:after {
+			border-color: $bg;
+		}
+	}
+}
+
+
+
+
+
+// ////////////////////
+// 3. Application of mixins
+.tile-wall .tile {
+
+	$n: 12n;
+
+	&:nth-child(#{$n}+1) {
+		@include tile--wide;
+		$col: mix(tomato, deepskyblue, 0%);
+		clear: both;
+
+		.tile__inner:after {
+			// border-left-color: $paper;
+		}
+	}
+
+	&:nth-child(#{$n}+2) {
+		@include tile--tall;
+		$col: mix(tomato, deepskyblue, 25%);
+		clear: left;
+
+		.tile__inner:after {
+			// border-top-color: $paper;
+		}
+	}
+
+	&:nth-child(#{$n}+3) {
+		@include tile--enorme;
+	}
+
+	&:nth-child(#{$n}+4) {
+		@include tile--wide;
+		$col: mix(tomato, deepskyblue, 75%);
+
+		.tile__inner:after {
+			// border-left-color: $paper;
+		}
+	}
+
+	&:nth-child(#{$n}+5) {
+		@include tile--tall;
+		$col: mix($highlight, tomato, 0%);
+		float: right;
+
+		.tile__inner:after {
+			// border-top-color: $paper;
+		}
+	}
+
+	&:nth-child(#{$n}+6) {
+		@include tile--wide;
+		@include tile--wide--reverse;
+		$col: mix($highlight, tomato, 25%);
+
+		.tile__inner:before {
+			// border-right-color: $paper;
+		}
+	}
+
+	&:nth-child(#{$n}+7) {
+		@include tile--wide;
+		@include tile--wide--reverse;
+		$col: mix($highlight, tomato, 50%);
+		float: right;
+		margin-left: 33.333%;
+
+		.tile__inner:before {
+			// border-right-color: $paper;
+		}
+	}
+
+	&:nth-child(#{$n}+8) {
+		@include tile--enorme;
+	}
+
+	&:nth-child(#{$n}+9) {
+		@include tile--tall;
+		$col: mix(deepskyblue, $highlight, 0%);
+
+		.tile__inner:after {
+			// border-top-color: $paper;
+		}
+	}
+
+	&:nth-child(#{$n}+10) {
+		@include tile--tall;
+		$col: mix(deepskyblue, $highlight, 25%);
+
+		.tile__inner:after {
+			// border-top-color: $paper;
+		}
+	}
+
+	&:nth-child(#{$n}+11) {
+		@include tile--wide;
+		@include tile--wide--reverse;
+		$col: mix(deepskyblue, $highlight, 50%);
+
+		.tile__inner:before {
+			// border-right-color: $paper;
+		}
+	}
+
+	&:nth-child(#{$n}+12) {
+		@include tile--wide;
+		$col: mix(deepskyblue, $highlight, 75%);
+
+		.tile__inner:after {
+			// border-left-color: $paper;
+		}
+	}
+}

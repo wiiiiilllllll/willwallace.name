@@ -1,6 +1,7 @@
 ---
 layout: case-study
 client: Lake Of Kings
+job: Packaging design
 title: Lotus
 date: 2016-01-10
 categories: case-study print design lake-of-kings

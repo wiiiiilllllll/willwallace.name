@@ -5,8 +5,16 @@
 }
 
 html {
-	background-color: $paper;
+	// background-color: $paper;
 	// background-color: $shark;
+}
+
+.body--home {
+	background-color: $shark;
+}
+
+.body--default {
+	background-color: $paper;
 }
 
 img {

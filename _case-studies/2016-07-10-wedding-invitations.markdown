@@ -3,7 +3,7 @@ layout: case-study
 client: Lynn and Chris
 job: Wedding stationery
 title: Lynn & Chris's wedding stationery
-date: 2016-07-20
+date: 2016-07-10
 categories: case-study print design lynn-chris wedding-invitations
 image: /images/large/mavericks-heroes.jpg
 thumbnail: /images/thumbnails/mavericks-heroes.jpg

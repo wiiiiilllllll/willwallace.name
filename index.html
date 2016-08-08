@@ -1,116 +1,49 @@
-<!DOCTYPE html> 
-<!--[if lte IE 9]><html class="no-js oldie" lang="en" itemscope itemtype="http://schema.org/Product"> <![endif]-->
-<!--[if gt IE 9]><!-->
-<html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product" prefix="og: http://ogp.me/ns/article#">
-<!--<![endif]-->
+---
+layout: home
+---
 
-  {% include head.html %}
+{% comment %}
+CONTENT BEGINS
+{% endcomment %}
 
-  <body class="body--home">
-
-    {% include header.html %}
-
-    <main class="main">
-
-      {% comment %}
-      CONTENT BEGINS
-      {% endcomment %}
-
-      {% assign items = site.case-studies | sort: 'date' | reverse %}
-      {% for item in items limit:1 %}
-      <div class="hero parallax b-lazy" data-src="{{ item.image }}">
-      {% endfor %}
-      {% for item in items limit:1 %}
-        <a href="{{ item.url }}" class="hero__first">
-            <div class="tile tile--text y2 x3 tile--highlight">
-              <h3 class="tile__title">{{ item.client }}</h3>
-              {{ item.title }}
-            </div>
-            {% if item.image %}
-              <noscript>
-                <img src="{{ item.image }}" alt="Thumbnail for {{ item.title }}" class="hero__first__image">
-              </noscript>
-            {% else %}
-              <noscript>
-                <img src="http://fillmurray.com/400/300" alt="Thumbnail for {{ item.title }}" class="hero__first__image">
-              </noscript>
-            {% endif %}
-        </a>
-        {% endfor %}
-
-        {% for item in items offset:1 limit:1 %}
-        <div class="hero__second">
-          <a href="{{ item.url }}" class="tile tile--two">
-            <div class="tile__inner">
-              <small class="tile__small">Case study</small>
-              <h3 class="tile__client">{{ item.client }}</h3>
-              <p class="tile__title">{{ item.title }}</p>
-            </div>
-            {% if item.thumbnail %}
-              <img src="{% include src %}" data-src="{{ item.thumbnail }}" alt="Thumbnail for {{ item.title }}" class="b-lazy tile__image">
-              <noscript>
-                <img src="{{ item.thumbnail }}" alt="Thumbnail for {{ item.title }}">
-              </noscript>
-            {% endif %}
-          </a>
+{% assign items = site.case-studies | sort: 'date' | reverse %}
+{% for item in items limit:1 %}
+<div class="hero parallax b-lazy" data-src="{{ item.image }}">
+{% endfor %}
+  {% for item in items limit:1 %}
+    <a href="{{ item.url }}" class="hero__first">
+        <div class="tile tile--text y2 x3 tile--highlight">
+          <h3 class="tile__title">{{ item.client }}</h3>
+          {{ item.job }}
         </div>
-        {% endfor %}
+        {% if item.image %}
+          <noscript>
+            <img src="{{ item.image }}" alt="Thumbnail for {{ item.title }}" class="hero__first__image">
+          </noscript>
+        {% else %}
+          <noscript>
+            <img src="http://fillmurray.com/400/300" alt="Thumbnail for {{ item.title }}" class="hero__first__image">
+          </noscript>
+        {% endif %}
+    </a>
+  {% endfor %}
+</div>
 
+<div class="tile-container tile-wall">
+  {% assign items = site.case-studies | sort: 'date' | reverse %}
+  {% for item in items offset:2 %}
+    <a href="{{ item.url }}" class="tile">
+      <div class="tile__inner">
+        <!-- <small class="tile__small">Case study</small> -->
+        <h3 class="tile__client">{{ item.client }}</h3>
+        <p class="tile__title">{{ item.job }}</p>
       </div>
-
-      <div class="tile-container">
-        {% assign items = site.case-studies | sort: 'date' | reverse %}
-        {% for item in items offset:2 %}
-
-          {% assign tile = "tile" %}
-          {% assign void = false %}
-          {% assign double = "" %}
-          {% assign highlight = "" %}
-          {% assign reverse = "" %}
-
-          {% case forloop.index %}
-            {% when 1 or 6 or 10 %}
-              {% assign void = true %}
-            {% when 2 or 3 or 5 or 8 %}
-              {% assign double = " tile--two" %}
-            {% when 3 or 8 or 9 %}
-              {% assign highlight = " tile--highlight" %}
-            {% when 5 %}
-              {% assign reverse = " tile--reverse" %}
-          {% endcase %}
-
-          {% capture class %}{{tile}}{{double}}{{highlight}}{{reverse}}{% endcapture %}
-
-          {% if void %}
-            <div class="tile tile--blank">&nbsp;</div>
-          {% else %}
-            <a href="{{ item.url }}" class="{{ class }}">
-              <div class="tile__inner">
-                <small class="tile__small">Case study</small>
-                <h3 class="tile__client">{{ item.client }}</h3>
-                <p class="tile__title">{{ item.title }}</p>
-                {% if double == "" %}
-
-                {% endif %}
-              </div>
-              {% if double != "" %}
-                {% if item.thumbnail %}
-                  <img src="{% include src %}" data-src="{{ item.thumbnail }}" alt="Thumbnail for {{ item.title }}" class="b-lazy tile__image">
-                  <noscript>
-                    <img src="{{ item.thumbnail }}" alt="Thumbnail for {{ item.title }}">
-                  </noscript>
-                {% endif %}
-              {% endif %}
-            </a>
-          {% endif %}
-        {% endfor %}
-      </div>
-
-      {% comment %}
-      CONTENT BEGINS
-      {% endcomment %}
-
-    </main>
-  <script src="/js/willwallace.js"></script>
-  </body>
-</html>
+      {% if item.thumbnail %}
+        <img src="{% include src %}" data-src="{{ item.thumbnail }}" alt="Thumbnail for {{ item.title }}" class="b-lazy tile__image">
+        <noscript>
+          <img src="{{ item.thumbnail }}" alt="Thumbnail for {{ item.title }}">
+        </noscript>
+      {% endif %}
+    </a>
+  {% endfor %}
+</div>

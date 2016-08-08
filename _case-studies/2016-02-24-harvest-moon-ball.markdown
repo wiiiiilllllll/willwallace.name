@@ -1,6 +1,7 @@
 ---
 layout: case-study
 client: Germain Financial Associates
+job: Web design & development
 title: The Harvest Moon Ball
 date: 2016-02-24
 categories: case-study web dev design harvestmoon

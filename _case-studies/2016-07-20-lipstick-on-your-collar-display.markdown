@@ -1,9 +1,9 @@
 ---
 layout: case-study
 client: Lipstick On Your Collar
-job: 2016 tour poster
+job: Brand & display advertising
 title: Lipstick On Your Collar tour poster
-date: 2016-07-10
+date: 2016-07-20
 categories: case-study print lipstick-on-your-collar design
 image: /images/large/lipstick-on-your-collar-identity.jpg
 thumbnail: /images/thumbnails/lipstick-on-your-collar-identity.jpg

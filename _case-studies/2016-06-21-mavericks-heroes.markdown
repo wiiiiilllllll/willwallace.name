@@ -1,8 +1,8 @@
 ---
 layout: case-study
 client: The Mavericks Brewing Company
-job: Heroes beer labels
-title: Heroes beer labels
+job: Brand & packaging design
+title: The Mavericks Brewing Company
 date: 2016-06-21
 categories: case-study print mavericks design
 image: /images/large/mavericks-heroes.jpg

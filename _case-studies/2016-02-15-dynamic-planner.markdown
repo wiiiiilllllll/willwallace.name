@@ -1,6 +1,7 @@
 ---
 layout: case-study
 client: Dynamic Planner
+job: Web design & development
 title: Website
 date: 2016-02-15
 categories: case-study web dev design wordpress dynamicplanner
