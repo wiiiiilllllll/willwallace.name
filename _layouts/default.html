@@ -1,19 +1,19 @@
 <!DOCTYPE html> 
 <!--[if lte IE 9]><html class="no-js oldie" lang="en" itemscope itemtype="http://schema.org/Product"> <![endif]-->
 <!--[if gt IE 9]><!-->
-<html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product" prefix="og: http://ogp.me/ns/article#">
+<html class="no-js" id="html" lang="en" itemscope itemtype="http://schema.org/Product" prefix="og: http://ogp.me/ns/article#">
 <!--<![endif]-->
-
-  {% include head.html %}
-
-  <body class="body--default">
-
-    {% include header.html %}
-
-    <main class="main">
-      {{ content }}
-    </main>
-  
-  </body>
-
+{% include head.html %}
+{% if page.bodyclass %}
+	{% assign bodyclass=page.bodyclass %}
+{% elsif layout.bodyclass %}
+	{% assign bodyclass=layout.bodyclass %}
+{% else %}
+	{% assign bodyclass="body--default" %}
+{% endif %}
+<body class="{{bodyclass}}">
+{% include masthead.html %}
+<main class="main">{{ content }}</main>
+{% include foot.html %}
+</body>
 </html>

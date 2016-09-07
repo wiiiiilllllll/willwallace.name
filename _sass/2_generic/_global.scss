@@ -5,15 +5,6 @@
 }
 
 html {
-	// background-color: $paper;
-	// background-color: $shark;
-}
-
-.body--home {
-	background-color: $shark;
-}
-
-.body--default {
 	background-color: $paper;
 }
 
@@ -28,10 +19,8 @@ img {
 	&.b-loaded {
 		opacity: 1;
 	}
-}
 
-.caps {
-	display: block;
-	margin-top: 1em;
-	text-transform: uppercase;
+	.no-js & {
+		display: none;
+	}
 }

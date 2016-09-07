@@ -1,0 +1,11 @@
+// Basically just the "back" link on article pages
+
+.nav {
+	display: block;
+	// margin-left: 2em;
+	margin: 0 0 2em 0;
+
+	.body--home & {
+		margin-top: 8em;
+	}
+}

@@ -1,0 +1,59 @@
+{% if include.caption %}
+	{% assign caption = include.caption %}
+{% else %}
+	{% assign caption = "" %}
+{% endif %}
+
+{% if include.type %}
+	{% assign type = "post__figure--" | append: include.type %}
+{% else %}
+	{% assign type = "" %}
+{% endif %}
+
+{% if include.hero == true %}
+	{% assign classname="b-lazy" %}
+{% else %}
+	{% assign classname="b-lazy pop" %}
+{% endif %}
+
+<figure class="post__figure {{type}}">
+	{% if include.2048 and include.1024 and include.512 %}
+		<img src="{% include src %}" data-src="{{include.512}}" data-srcset="{{include.1024}} 1024w, {{include.2048}} 2048w" alt="{{caption}}" data-full="{{include.2048}}" class="{{classname}}">
+		<noscript>
+			<img src="{{include.512}}" srcset="{{include.1024}} 1024w, {{include.2048}} 2048w" alt="{{caption}}">
+		</noscript>
+	{% elsif include.2048 and include.1024 %}
+		<img src="{% include src %}" data-src="{{include.1024}}" data-srcset="{{include.1024}} 1024w, {{include.2048}} 2048w" alt="{{caption}}" data-full="{{include.2048}}" class="{{classname}}">
+		<noscript>
+			<img src="{{include.1024}}" srcset="{{include.2048}} 2048w" alt="{{caption}}">
+		</noscript>
+	{% elsif include.2048 and include.512 %}
+		<img src="{% include src %}" data-src="{{include.512}}" data-srcset="{{include.2048}} 2048w" alt="{{caption}}" data-full="{{include.2048}}" class="{{classname}}">
+		<noscript>
+			<img src="{{include.512}}" srcset="{{include.2048}} 2048w" alt="{{caption}}">
+		</noscript>
+	{% elsif include.2048 %}
+		<img src="{% include src %}" data-src="{{include.2048}}" alt="{{caption}}" data-full="{{include.2048}}" class="{{classname}}">
+		<noscript>
+			<img src="{{include.2048}}" alt="{{caption}}">
+		</noscript>
+	{% elsif include.1024 and include.512 %}
+		<img src="{% include src %}" data-src="{{include.512}}" data-srcset="{{include.1024}} 1024w" alt="{{caption}}" data-full="{{include.1024}}" class="{{classname}}">
+		<noscript>
+			<img src="{{include.512}}" data-srcset="{{include.1024}} 1024w" alt="{{caption}}">
+		</noscript>
+	{% elsif include.1024 %}
+		<img src="{% include src %}" data-src="{{include.1024}}" alt="{{caption}}" data-full="{{include.1024}}" class="{{classname}}">
+		<noscript>
+			<img src="{{include.1024}}" alt="{{caption}}">
+		</noscript>
+	{% elsif include.512 %}
+		<img src="{% include src %}" data-src="{{include.512}}" alt="{{caption}}" data-full="{{include.512}}" class="{{classname}}">
+		<noscript>
+			<img src="{{include.512}}" alt="{{caption}}">
+		</noscript>
+	{% endif %}
+	{% if include.caption %}
+		<figcaption class="post__caption">{{caption}}</figcaption>
+	{% endif %}
+</figure>

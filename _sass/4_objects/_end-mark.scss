@@ -1,0 +1,14 @@
+// The little icon that appears at then end of an article
+
+.end-mark {
+	display: block;
+	fill: $shark;
+	margin-bottom: 0 !important;
+	margin-top: 2em;
+	opacity: 0.3;
+	width: 2em;
+
+	.svg {
+		display: block;
+	}
+}

@@ -1,49 +1,25 @@
 ---
-layout: home
+layout: default
+bodyclass: body--home
 ---
-
-{% comment %}
-CONTENT BEGINS
-{% endcomment %}
-
 {% assign items = site.case-studies | sort: 'date' | reverse %}
-{% for item in items limit:1 %}
-<div class="hero parallax b-lazy" data-src="{{ item.image }}">
+{% for item in items %}
+<section class="section">
+	<div class="section__left" style="background-color: #{{item.color}}">
+		<a href="{{item.url}}" class="left__inner">
+			<h3 class="left__client">{{ item.client }}</h3>
+			<p class="left__job">{{ item.job }}</p>
+		</a>
+	</div>
+	<div class="section__right">
+		<a href="{{item.url}}" class="section__image-link">
+			<img src="{% include src %}" data-srcset="{{item.image-1024}} 1024w, {{item.image-2048}} 2048w" data-src="{{item.image}}" alt="{{item.title}}" class="b-lazy">
+		</a>
+		<noscript>
+			<a href="{{item.url}}">
+				<img src="{{item.image}}" alt="{{item.title}}">
+			</a>
+		</noscript>
+	</div>
+</section>
 {% endfor %}
-  {% for item in items limit:1 %}
-    <a href="{{ item.url }}" class="hero__first">
-        <div class="tile tile--text y2 x3 tile--highlight">
-          <h3 class="tile__title">{{ item.client }}</h3>
-          {{ item.job }}
-        </div>
-        {% if item.image %}
-          <noscript>
-            <img src="{{ item.image }}" alt="Thumbnail for {{ item.title }}" class="hero__first__image">
-          </noscript>
-        {% else %}
-          <noscript>
-            <img src="http://fillmurray.com/400/300" alt="Thumbnail for {{ item.title }}" class="hero__first__image">
-          </noscript>
-        {% endif %}
-    </a>
-  {% endfor %}
-</div>
-
-<div class="tile-container tile-wall">
-  {% assign items = site.case-studies | sort: 'date' | reverse %}
-  {% for item in items offset:2 %}
-    <a href="{{ item.url }}" class="tile">
-      <div class="tile__inner">
-        <!-- <small class="tile__small">Case study</small> -->
-        <h3 class="tile__client">{{ item.client }}</h3>
-        <p class="tile__title">{{ item.job }}</p>
-      </div>
-      {% if item.thumbnail %}
-        <img src="{% include src %}" data-src="{{ item.thumbnail }}" alt="Thumbnail for {{ item.title }}" class="b-lazy tile__image">
-        <noscript>
-          <img src="{{ item.thumbnail }}" alt="Thumbnail for {{ item.title }}">
-        </noscript>
-      {% endif %}
-    </a>
-  {% endfor %}
-</div>

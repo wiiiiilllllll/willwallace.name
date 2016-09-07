@@ -1,23 +1,41 @@
 ---
 layout: default
+bodyclass: body--case-study
 ---
-<nav><a href="{{ site.baseurl }}/">&larrb; Back</a></nav>
-<article class="case-study" itemscope itemtype="http://schema.org/BlogPosting">
-
-  <header class="header">
-    <h1 class="header__client" itemprop="name headline">{{page.title}}</h1>
-    {% if page.subtitle %}
-      <small class="caps">Title</small>
-      <h3 class="header__title" itemprop="">{{page.subtitle}}</h3>
-    {% endif %}
-    <p class="header__meta">
-      <small class="caps">Date</small>
-    	<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
-    </p>
-  </header>
-
-  <div class="post__content" itemprop="articleBody">
-    {{content}}
-  </div>
-
-</article>
+<section class="section post">
+	<div class="section__left" style="background-color:#{{page.color}}">
+		<nav class="nav"><a href="{{ site.baseurl }}/">&larrb; Back</a></nav>
+		<header class="header">
+			<h1 class="header__client" itemprop="name headline">{{page.title}}</h1>
+			{% if page.subtitle %}
+				<small class="caps">Title</small>
+				<h3 class="header__title" itemprop="">{{page.subtitle}}</h3>
+			{% endif %}
+			<p class="header__meta">
+				<small class="caps">Date</small>
+				<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+			</p>
+		</header>
+	</div>
+	<div class="section__right">
+		{%
+		include figure.html
+		hero=true
+		type="cover"
+		caption=page.title
+		512=page.image
+		1024=page.image-1024
+		2048=page.image-2048
+		%}
+		{{content}}
+		<span class="end-mark">{% include logo.svg %}</span>
+		<div class="pagination">
+			{% if page.previous.url %}
+				<a class="pagination__link pagination__prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+			{% endif %}
+			{% if page.next.url %}
+				<a class="pagination__link pagination__next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+			{% endif %}
+		</div>
+	</div>
+</section>

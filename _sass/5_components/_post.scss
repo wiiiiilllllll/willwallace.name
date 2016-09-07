@@ -3,29 +3,64 @@
 // (who am I kidding, there won't be any blog posts)
 
 .post {
-
-}
-
-.post__content {
 	line-height: 1.4;
-	
-	> * {
-		margin-bottom: 2em;
-	}
-
-	p {
-		max-width: 65ch;
-	}
 
 	h2 {
 		margin-bottom: 0;
 	}
 
-	figure {
-		margin: 0;
+	a {
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+		&:active {
+			text-decoration: underline;
+		}
+	}
+}
+
+.post__figure {
+	background-color: mix($shark, $paper, 10%);
+	margin: 2em 0;
+	position: relative;
+
+	&:first-child {
+		margin: -2em -2em 2em;
+
+		img {
+			height: 50vh;
+		}
+
+		figcaption {
+			display: none;
+		}
 	}
 
-	.tile-container {
-		margin-bottom: 2em;
+	img {
+		margin: auto;
+		max-height: 60vh;
+	}
+
+	&--cover img {
+		object-fit: cover;
+		width: 100%;
+	}
+
+	&--contain img {
+		object-fit: contain;
+	}
+}
+
+.post__caption {
+	background-color: $paper;
+	color: mix($paper, $shark, 33%);
+	font-size: .8em;
+	padding: .5em .2em 0;
+
+	&:before {
+		content: 'Above: ';
+		font-variant: small-caps;
 	}
 }
