@@ -1,0 +1,49 @@
+// Social
+// List of social links on the About page
+
+// <div>
+.social {
+
+	ul {
+		@include unstyled;
+		text-align: center;
+	}
+
+	li {
+		display: inline-block;
+		margin: 0 1em;
+
+		a:before {
+			content: '';
+			display: inline-block;
+			height: 1em;
+			margin-right: .5em;
+			width: 1em;
+		}
+
+		a,a:before {
+			vertical-align: middle;
+		}
+	}
+
+	.email a:before {
+		background: url(/images/mail.svg) no-repeat center center;
+	}
+
+	.linkedin a:before {
+		background: url(/images/linkedin.svg) no-repeat center center;
+		margin-bottom: .3em;
+	}
+
+	.twitter a:before {
+		background: url(/images/twitter.svg) no-repeat center center;
+	}
+
+	.instagram a:before {
+		background: url(/images/instagram.svg) no-repeat center center;
+	}
+
+	.lastfm a:before {
+		background: url(/images/lastfm.svg) no-repeat center center;
+	}
+}

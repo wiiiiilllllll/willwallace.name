@@ -17,7 +17,8 @@
 	}
 
 	@media only screen and (min-width: 45em) {
-		.body--case-study & {
+		.body--case-study &,
+		.body--about & {
 			flex-flow: row nowrap;
 			min-height: 110vh;
 		}
@@ -39,15 +40,14 @@
 	z-index: 1;
 
 	.body--home & {
-		// align-items: center;
 		justify-content: center;
 		margin-right: -1em;
 		mix-blend-mode: multiply;
-		padding: 1em 2em 1em 1em;
 	}
 
-	.body--case-study & {
-		// position: fixed;
+	.body--home &,
+	.body--about & {
+		padding: 1em 2em 1em 1em;
 	}
 
 	p {
@@ -68,7 +68,8 @@
 
 .section__right {
 
-	.body--case-study & {
+	.body--case-study &,
+	.body--about & {
 		padding: 2em;
 	}
 
@@ -85,11 +86,6 @@
 
 		.body--home & {
 			width: calc(66.666% + 1em);
-		}
-
-		.body--case-study & {
-			// margin-left: 33.333%;
-			// padding: 2em;
 		}
 	}
 

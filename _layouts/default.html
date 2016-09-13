@@ -12,7 +12,9 @@
 	{% assign bodyclass="body--default" %}
 {% endif %}
 <body class="{{bodyclass}}">
-{% include masthead.html %}
+{% if bodyclass == "body--home" %}
+	{% include masthead.html %}
+{% endif %}
 <main class="main">{{ content }}</main>
 {% include foot.html %}
 </body>
