@@ -12,10 +12,10 @@ thumbnail: /images/thumbnails/mavericks-heroes.jpg
 color: 3E7033
 ---
 ## The brief
-Graphic design and brand identity for the Mavericks Brewing Company and their Heroes range of beers.
+Graphic design and brand identity for the Mavericks Brewing Company, a newly-established microbrewery based in Hampshire.
 
 ## The work
-When Peter from The Mavericks Brewing Company approached me about designing a range of beer labels I was very excited – this was a dream job for a craft beer fan like me! Mavericks are a newly-established microbrewery based in Hampshire. Their inaugural collection of three beers is named Heroes, and is dedicated to the men and women of the British armed forces. Peter wanted this military theme to be reflected in the design, and had an idea of the visual style he wanted me to pursue, drawing influences from art deco and early 20th-century Soviet propaganda posters.
+When Peter from The Mavericks Brewing Company approached me about designing a range of beer labels I was very excited – this was a dream job for a craft beer fan like me! Their inaugural collection of three beers is named Heroes, and is dedicated to the men and women of the British armed forces. Peter wanted this military theme to be reflected in the design, and had an idea of the visual style he wanted me to pursue, drawing influences from art deco and early 20th-century Soviet propaganda posters.
 
 {%
 include figure.html

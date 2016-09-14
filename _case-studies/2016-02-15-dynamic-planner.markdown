@@ -12,10 +12,10 @@ thumbnail: /images/thumbnails/dynamic-planner.jpg
 color: 9E1B46
 ---
 ## The brief
-Design and development of a bespoke Wordpress theme
+Design and development of a bespoke Wordpress theme for Distribution Technology, a financial software company.
 
 ## The work
-This was a project with a very quick turnaround, completed while I was part of the team at Siteset Digital. The client, Distribution Technology, approached Siteset with a view to redeveloping the website for their main software product, Dynamic Planner.
+This was a project with a very quick turnaround, completed while I was part of the team at Siteset Digital. Distribution Technology approached Siteset with a view to redeveloping the website for their main software product, Dynamic Planner.
 
 The aims for the new site were: increased visual impact; implement the new brand style developed for Dynamic Planner; a Wordpess build for ease of use by the client. We decided the best way to get the site up and running quickly was to create a custom Wordpress theme, building on the [Naked starter theme][1]. My role as designer was to create wireframe layouts for the homepage and various content pages, which were then worked up into full Photoshop visual mockups. Once these were approved I also worked on front-end development of the site.
 

@@ -12,7 +12,7 @@ thumbnail: /images/thumbnails/lake-of-kings-lotus.jpg
 color: 01305B
 ---
 ## The brief
-Custom screenprinted and laser-cut CD sleeves for the album _Lotus by_ Lake Of Kings.
+Cover design &amp; artwork for the album _Lotus_ by Lake Of Kings.
 
 ## The work
 As a professional graphic designer and amateur musician, designing my band's album cover is pretty much a dream job. We received some small praise for the bespoke fold-out cover I designed for our previous EP _Sparks_, and my bandmates were keen for a repeat success with our debut full-length album, _Lotus_.

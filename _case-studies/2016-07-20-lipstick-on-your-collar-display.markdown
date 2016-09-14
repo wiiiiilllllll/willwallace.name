@@ -12,7 +12,7 @@ thumbnail: /images/thumbnails/lipstick-on-your-collar.jpg
 color: BD2244
 ---
 ## The brief
-Graphic design and brand identity for Lipstick On Your Collar, a 1950s and '60s rock & roll stage show.
+Graphic design of posters & flyers for Lipstick On Your Collar, a 1950s and '60s rock & roll stage show. 
 
 ## The work
 I've worked with Lipstick On Your Collar for several years; I designed their original logo and stationery. Since then we've worked on various promotional materials for both print and web.

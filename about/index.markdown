@@ -22,7 +22,7 @@ If you'd like to know more about my work, please [download my CV]({{site.baseurl
 
 <div class="social" markdown="1">
 
- - {:.email} [Email][1]{:target="_blank"}
+ - {:.email} [will@willwallace.name][1]{:target="_blank"}
  - {:.linkedin} [LinkedIn][2]{:target="_blank"}
  - {:.twitter} [Twitter][3]{:target="_blank"}
  - {:.instagram} [Instagram][4]{:target="_blank"}

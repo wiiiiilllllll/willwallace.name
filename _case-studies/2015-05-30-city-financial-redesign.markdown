@@ -12,7 +12,7 @@ thumbnail: /images/thumbnails/city-financial-corporate.jpg
 color: 1F5177
 ---
 ## The brief
-A speculative redesign for City Financial's website.
+Visual design for City Financial, an investment management firm based in London. 
 
 ## The work
 This was part of a prospective redesign project for [City Financial][1], completed while I was at Siteset Digital. My task was to increase the visual impact of the home page, whilst retaining the existing content structure. Sadly the project never went ahead.

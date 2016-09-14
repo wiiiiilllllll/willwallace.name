@@ -12,7 +12,7 @@ thumbnail: /images/thumbnails/harvest-moon-ball.jpg
 color: FA4C33
 ---
 ## The brief
-Design and front-end development including CSS, JavaScript and PHP
+Design and front-end development for the Harvest Moon Ball, a charity fund-raising event.
 
 ## The work
 This was a fun micro-budget project, completed when I was part of the team at Siteset Digital. One of Siteset's existing clients, Germain Financial Associates, needed a new website for their annual charity event, the Harvest Moon Ball. My role was the visual design and front-end development.

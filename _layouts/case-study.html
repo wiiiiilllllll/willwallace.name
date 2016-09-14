@@ -12,8 +12,7 @@ bodyclass: body--case-study
 				<h3 class="header__title" itemprop="">{{page.subtitle}}</h3>
 			{% endif %}
 			<p class="header__meta">
-				<small class="caps">Date</small>
-				<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+				<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %Y" }}</time>
 			</p>
 		</header>
 	</div>
@@ -28,7 +27,8 @@ bodyclass: body--case-study
 		2048=page.image-2048
 		%}
 		{{content}}
-		<span class="end-mark">{% include logo.svg %}</span>
+		<hr>
+		<p class="end-mark"><span>{% include logo.svg %}</span> Can I help with your design or development work? <a href="{{site.baseurl}}/about">Get in touch</a>.</p>
 		<div class="pagination">
 			{% if page.previous.url %}
 				<a class="pagination__link pagination__prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>

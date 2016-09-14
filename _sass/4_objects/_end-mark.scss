@@ -1,12 +1,19 @@
 // The little icon that appears at then end of an article
 
 .end-mark {
-	display: block;
-	fill: $shark;
-	margin-bottom: 0 !important;
-	margin-top: 2em;
-	opacity: 0.3;
-	width: 2em;
+	color: mix($paper, $shark, 33%);
+	font-size: .8em;
+	// font-style: italic;
+
+	span {
+		display: inline-block;
+		fill: $shark;
+		margin-bottom: 0 !important;
+		// margin-right: 1em;
+		margin-top: 2em;
+		opacity: 0.3;
+		width: 2em;
+	}
 
 	.svg {
 		display: block;
