@@ -22,7 +22,9 @@ var gulp = require('gulp'),
 gulp.task('scripts', function() {
     return gulp.src([
         '_scripts/vendor/*.js',
-        '_scripts/*.js'
+        '_scripts/utils.js',
+        '_scripts/lux.js',
+        '_scripts/app.js'
     ])
     .pipe(concat('willwallace.js'))
     .pipe(gulp.dest('js'))
