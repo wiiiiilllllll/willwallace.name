@@ -29,7 +29,9 @@ gulp.task('scripts', function() {
     .pipe(concat('willwallace.js'))
     .pipe(gulp.dest('js'))
     .pipe(rename({suffix: '.min'}))
-    .pipe(uglify())
+    .pipe(uglify({
+        
+    }))
     .on('error', function (err) { // this entire handler doesn't appear to work
         console.log(err.message)
         this.emit('end')

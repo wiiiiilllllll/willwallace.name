@@ -7,3 +7,5 @@ var bLazy = new Blazy();
 
 // It's time to light the lightboxes
 lux.init();
+
+objectFitImages();

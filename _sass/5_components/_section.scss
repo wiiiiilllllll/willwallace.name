@@ -99,7 +99,7 @@
 		}
 
 		.body--home & {
-			object-fit: cover;
+			@include object-fit(cover);
 		}
 	}
 }

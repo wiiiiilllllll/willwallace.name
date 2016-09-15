@@ -44,12 +44,12 @@
 	}
 
 	&--cover img {
-		object-fit: cover;
+		@include object-fit(cover);
 		width: 100%;
 	}
 
 	&--contain img {
-		object-fit: contain;
+		@include object-fit(contain);
 	}
 }
 
