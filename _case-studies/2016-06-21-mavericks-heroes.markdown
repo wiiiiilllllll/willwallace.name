@@ -21,9 +21,9 @@ When Peter from The Mavericks Brewing Company approached me about designing a ra
 include figure.html
 type="cover"
 caption="A selection of the research materials I used"
-512="/images/2016-06-21-mavericks-heroes/research-512.jpg"
-1024="/images/2016-06-21-mavericks-heroes/research-1024.jpg"
-2048="/images/2016-06-21-mavericks-heroes/research-2048.jpg"
+512="/images/mavericks/research-512.jpg"
+1024="/images/mavericks/research-1024.jpg"
+2048="/images/mavericks/research-2048.jpg"
 %}
 
 I began by doing lots of research, soaking up the historical art which was to inform the look of the labels. The three beers in the Heroes range are Skirmish, Depth Charge, and Wooka Wooka (named after the slang term for a Chinook helicopter). A clear theme of "land, sea, and air" emerged as a neat way to differentiate each product while keeping them visually related. We'd also agreed to use a single main colour for each design, which fit nicely with the propaganda aesthetic.
@@ -32,9 +32,9 @@ I began by doing lots of research, soaking up the historical art which was to in
 include figure.html
 type="cover"
 caption="The initial mockups"
-512="/images/2016-06-21-mavericks-heroes/mockups-512.jpg"
-1024="/images/2016-06-21-mavericks-heroes/mockups-1024.jpg"
-2048="/images/2016-06-21-mavericks-heroes/mockups-2048.jpg"
+512="/images/mavericks/mockups-512.jpg"
+1024="/images/mavericks/mockups-1024.jpg"
+2048="/images/mavericks/mockups-2048.jpg"
 %}
 
 I began with pen & paper sketches then moved on to making some rough vector mockups of each label, to get a feel for our intended tone and atmosphere. Skirmish and Wooka Wooka came together quickly; in fact Wooka Wooka changed very little from its first incarnation. Depth Charge took a little longer however. The explosive device which lends the beer its name is not very visually interesting, and I realised the design would have to focus on something else. After conferring with Peter, I tried exploring some different options including submarines, explosions, and one composition heavily inspired by a famous art deco cruise poster. Eventually we landed on a design which worked.
@@ -43,9 +43,9 @@ I began with pen & paper sketches then moved on to making some rough vector mock
 include figure.html
 type="contain"
 caption="Some discarded design ideas"
-512="/images/2016-06-21-mavericks-heroes/versions-512.jpg"
-1024="/images/2016-06-21-mavericks-heroes/versions-1024.jpg"
-2048="/images/2016-06-21-mavericks-heroes/versions-2048.jpg"
+512="/images/mavericks/versions-512.jpg"
+1024="/images/mavericks/versions-1024.jpg"
+2048="/images/mavericks/versions-2048.jpg"
 %}
 
 With the mockups approved I polished up the fine details of each illustration, adding colour and texture where appropriate. It was then simply a case of creating a layout with space for the barcode, ingredients list, legal info and flavour text.
@@ -54,7 +54,7 @@ With the mockups approved I polished up the fine details of each illustration, a
 include figure.html
 type="cover"
 caption="The final designs"
-512="/images/2016-06-21-mavericks-heroes/final-512.jpg"
-1024="/images/2016-06-21-mavericks-heroes/final-1024.jpg"
-2048="/images/2016-06-21-mavericks-heroes/final-2048.jpg"
+512="/images/mavericks/final-512.jpg"
+1024="/images/mavericks/final-1024.jpg"
+2048="/images/mavericks/final-2048.jpg"
 %}

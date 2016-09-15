@@ -17,11 +17,7 @@
 	<link rel="canonical" href="http://willwallace.name/about/">
 	<link rel="alternate" type="application/rss+xml" title="Will Wallace" href="http://willwallace.name/feed.xml">
 	<link rel="apple-touch-icon-precomposed" href="images/favicon-152.png">
-	<script>
-		if ('querySelector' in document && 'addEventListener' in window) {
-			document.write('<script src="/js/willwallace.min.js" defer><\/script>');
-		}
-	</script>
+	<script>(function(w){var loadJS=function(src,cb){"use strict";var ref=w.document.getElementsByTagName("script")[0];var script=w.document.createElement("script");script.src=src;script.async=true;ref.parentNode.insertBefore(script,ref);if(cb && typeof(cb)==="function"){script.onload=cb;}return script;};if(typeof module!=="undefined"){module.exports=loadJS;}else{w.loadJS=loadJS;}}(typeof global!=="undefined"?global:this));loadJS('/js/willwallace.js');</script>
 </head>
 
 <body class="body--about">
@@ -31,7 +27,7 @@
 		<nav class="nav"><a href="/">&larrb; Back</a></nav>
 	</div>
 	<div class="section__right">
-		<p>Hi, I’m Will. I’m a graphic designer and front-end web developer living in the South of England. I have nearly 10 years’ experience in the world of creative design, including both print and web.</p>
+		<p>Hi, I’m Will. I’m a freelance graphic designer and front-end web developer living in the South of England. I have nearly 10 years’ experience in the world of creative design, including both print and web.</p>
 
 <p>I’m equally at home using Adobe Creative Suite, or Sublime Text and Git. My background in print means I have a good eye for detail and a creative flair, while my coding experience gives me a solid understanding of the practicalities of making a design work.</p>
 
@@ -41,8 +37,8 @@
 <p>This site is built on <a href="https://jekyllrb.com">Jekyll</a>, and was designed and built to be as lightweight as possible. The code is mostly hand-crafted, with the exception of a couple of third-party scripts:</p>
 
 <ul>
+  <li><a href="https://github.com/filamentgroup/loadJS">loadJS</a> (for – surprise! – loading JavaScript)</li>
   <li><a href="https://github.com/dinbror/blazy">bLazy</a> (for lazy-loading images)</li>
-  <li><a href="https://github.com/flouthoc/uglipop.js">uglipop</a> (for the Lightbox-style image popups)</li>
 </ul>
 
 <p>The typeface used throughout is <a href="https://github.com/weiweihuanghuang/Work-Sans">Work Sans</a>. The entire codebase for the site is open-source and available on <a href="https://github.com/wiiiiilllllll/willwallace.name">GitHub</a>.</p>
@@ -74,5 +70,6 @@
 	<span class="footer__text">&copy;2016</span>
 	<a href="#" class="footer__text">Back to top</a>
 </footer>
+<script src="/js/modernizr.js" async></script>
 </body>
 </html>

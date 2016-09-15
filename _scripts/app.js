@@ -5,25 +5,8 @@ document.getElementById('html').className = "js";
 // https://github.com/dinbror/blazy
 var bLazy = new Blazy();
 
-// Set up click handlers for the lightbox
-var elements = document.querySelectorAll('.pop');
-for (i=0;i<elements.length;i++) {
-	addListener(elements[i],'click',function(e){
-		pop(e);
-	});
-};
-
-// Show a lightbox
-// http://argunner.github.io/uglipop.js/
-function pop(el){
-	var full = el.target.getAttribute("data-full");
-	console.log('full',full)
-	uglipop({
-		class:'uglipop',
-		source:'html',
-	    content:'<img src="'+full+'"></img>'
-	})
-};
+// It's time to light the lightboxes
+lux.init();
 
 // Cross-browser event listener
 // http://stackoverflow.com/a/12783362
@@ -33,9 +16,27 @@ function addListener(elem, type, fn) {
 
     } else if (elem.attachEvent) {
         elem.attachEvent("on" + type, function() {
-                                          return fn.call(elem, window.event);
-                                       });
+			return fn.call(elem, window.event);
+		});
     } else {
         elem["on" + type] = fn;
     }
+}
+
+// Add classname
+function addClass(el, cl) {
+	if (el.classList) {
+		el.classList.add(cl);
+	} else {
+		el.className += ' ' + cl;
+	}
+}
+
+// Remove classname
+function removeClass(el, cl) {
+	if (el.classList) {
+		el.classList.remove(cl);
+	} else {
+		el.className = el.className.replace(new RegExp('(^|\\b)' + cl.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+	}
 }

@@ -23,9 +23,9 @@ When we sat down to discuss ideas for the artwork, the album title immediately s
 include figure.html
 type="cover"
 caption="Screen printing the sleeves. Photos: Chessie Rossier"
-512="/images/2015-08-22-lake-of-kings-lotus/printing-512.jpg"
-1024="/images/2015-08-22-lake-of-kings-lotus/printing-1024.jpg"
-2048="/images/2015-08-22-lake-of-kings-lotus/printing-2048.jpg"
+512="/images/lake-of-kings/printing-512.jpg"
+1024="/images/lake-of-kings/printing-1024.jpg"
+2048="/images/lake-of-kings/printing-2048.jpg"
 %}
 
 I went to [Squeegee & Ink][5] to screenprint the sleeves. I chose screenprinting for two reasons: our small budget and my high standards. For a short-run low-budget project such as this, digital print would seem to be ideal: it's low cost, economical for short print runs, and has excellent image quality. However I dislike its cheap glossiness, and persuaded my bandmates that our album deserved something more "authentic". I looked at other print methods including letterpress and Risograph, and even something much more lo-fi like rubber ink stamps. In the end I decided on screen print as the happy medium between affordable, authentic, and fast.
@@ -36,9 +36,9 @@ Squeegee & Ink were great; we experimented with inks and techniques, and they ta
 include figure.html
 type="cover"
 caption="The finished products"
-512="/images/2015-08-22-lake-of-kings-lotus/final-512.jpg"
-1024="/images/2015-08-22-lake-of-kings-lotus/final-1024.jpg"
-2048="/images/2015-08-22-lake-of-kings-lotus/final-2048.jpg"
+512="/images/lake-of-kings/final-512.jpg"
+1024="/images/lake-of-kings/final-1024.jpg"
+2048="/images/lake-of-kings/final-2048.jpg"
 %}
 
 <small>Listen to the album:</small>

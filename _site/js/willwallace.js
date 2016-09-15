@@ -3,117 +3,379 @@
   A fast, small and dependency free lazy load script (https://github.com/dinbror/blazy)
   (c) Bjoern Klinggaard - @bklinggaard - http://dinbror.dk/blazy
 */
-  (function(p,m){"function"===typeof define&&define.amd?define(m):"object"===typeof exports?module.exports=m():p.Blazy=m()})(this,function(){function p(b){var c=b._util;c.elements=B(b.options.selector);c.count=c.elements.length;c.destroyed&&(c.destroyed=!1,b.options.container&&k(b.options.container,function(a){n(a,"scroll",c.validateT)}),n(window,"resize",c.save_viewportOffsetT),n(window,"resize",c.validateT),n(window,"scroll",c.validateT));m(b)}function m(b){for(var c=b._util,a=0;a<c.count;a++){var d=c.elements[a],f=d.getBoundingClientRect();if(f.right>=e.left&&f.bottom>=e.top&&f.left<=e.right&&f.top<=e.bottom||q(d,b.options.successClass))b.load(d),c.elements.splice(a,1),c.count--,a--}0===c.count&&b.destroy()}function x(b,c,a){if(!q(b,a.successClass)&&(c||a.loadInvisible||0<b.offsetWidth&&0<b.offsetHeight))if(c=b.getAttribute(r)||b.getAttribute(a.src)){c=c.split(a.separator);var d=c[y&&1<c.length?1:0],f="img"===b.nodeName.toLowerCase();if(f||void 0===b.src){var l=new Image,u=function(){a.error&&a.error(b,"invalid");t(b,a.errorClass);g(l,"error",u);g(l,"load",h)},h=function(){if(f){b.src=d;v(b,"srcset",a.srcset);var c=b.parentNode;c&&"picture"===c.nodeName.toLowerCase()&&k(c.getElementsByTagName("source"),function(b){v(b,"srcset",a.srcset)})}else b.style.backgroundImage='url("'+d+'")';w(b,a);g(l,"load",h);g(l,"error",u)};n(l,"error",u);n(l,"load",h);l.src=d}else b.src=d,w(b,a)}else"video"===b.nodeName.toLowerCase()?(k(b.getElementsByTagName("source"),function(b){v(b,"src",a.src)}),b.load(),w(b,a)):(a.error&&a.error(b,"missing"),t(b,a.errorClass))}function w(b,c){t(b,c.successClass);c.success&&c.success(b);b.removeAttribute(c.src);k(c.breakpoints,function(a){b.removeAttribute(a.src)})}function v(b,c,a){var d=b.getAttribute(a);d&&(b[c]=d,b.removeAttribute(a))}function q(b,c){return-1!==(" "+b.className+" ").indexOf(" "+c+" ")}function t(b,c){q(b,c)||(b.className+=" "+c)}function B(b){var c=[];b=document.querySelectorAll(b);for(var a=b.length;a--;c.unshift(b[a]));return c}function z(b){e.bottom=(window.innerHeight||document.documentElement.clientHeight)+b;e.right=(window.innerWidth||document.documentElement.clientWidth)+b}function n(b,c,a){b.attachEvent?b.attachEvent&&b.attachEvent("on"+c,a):b.addEventListener(c,a,!1)}function g(b,c,a){b.detachEvent?b.detachEvent&&b.detachEvent("on"+c,a):b.removeEventListener(c,a,!1)}function k(b,c){if(b&&c)for(var a=b.length,d=0;d<a&&!1!==c(b[d],d);d++);}function A(b,c,a){var d=0;return function(){var f=+new Date;f-d<c||(d=f,b.apply(a,arguments))}}var r,e,y;return function(b){if(!document.querySelectorAll){var c=document.createStyleSheet();document.querySelectorAll=function(a,b,d,h,e){e=document.all;b=[];a=a.replace(/\[for\b/gi,"[htmlFor").split(",");for(d=a.length;d--;){c.addRule(a[d],"k:v");for(h=e.length;h--;)e[h].currentStyle.k&&b.push(e[h]);c.removeRule(0)}return b}}var a=this,d=a._util={};d.elements=[];d.destroyed=!0;a.options=b||{};a.options.error=a.options.error||!1;a.options.offset=a.options.offset||100;a.options.success=a.options.success||!1;a.options.selector=a.options.selector||".b-lazy";a.options.separator=a.options.separator||"|";a.options.container=a.options.container?document.querySelectorAll(a.options.container):!1;a.options.errorClass=a.options.errorClass||"b-error";a.options.breakpoints=a.options.breakpoints||!1;a.options.loadInvisible=a.options.loadInvisible||!1;a.options.successClass=a.options.successClass||"b-loaded";a.options.validateDelay=a.options.validateDelay||25;a.options.save_viewportOffsetDelay=a.options.save_viewportOffsetDelay||50;a.options.srcset=a.options.srcset||"data-srcset";a.options.src=r=a.options.src||"data-src";y=1<window.devicePixelRatio;e={};e.top=0-a.options.offset;e.left=0-a.options.offset;a.revalidate=function(){p(this)};a.load=function(a,b){var c=this.options;void 0===a.length?x(a,b,c):k(a,function(a){x(a,b,c)})};a.destroy=function(){var a=this._util;this.options.container&&k(this.options.container,function(b){g(b,"scroll",a.validateT)});g(window,"scroll",a.validateT);g(window,"resize",a.validateT);g(window,"resize",a.save_viewportOffsetT);a.count=0;a.elements.length=0;a.destroyed=!0};d.validateT=A(function(){m(a)},a.options.validateDelay,a);d.save_viewportOffsetT=A(function(){z(a.options.offset)},a.options.save_viewportOffsetDelay,a);z(a.options.offset);k(a.options.breakpoints,function(a){if(a.width>=window.screen.width)return r=a.src,!1});setTimeout(function(){p(a)})}});
-/*|--uglipop.js--|
-|--(A Minimalistic Pure JavaScript Modal )--|
-|--Author : flouthoc (gunnerar7@gmail.com)(https://github.com/flouthoc)--|
-|--Contributers : Add Your Name Below--|
-|-- zhuharev (kirill at zhuharev.ru)(https://github.com/zhuharev)--|*/
-
-(function(w, doc) {
-    "use strict";
-
-    var initted = false
-
-    function on(el, eventName, handler) {
-        if (el.addEventListener) {
-            el.addEventListener(eventName, handler);
-        } else {
-            el.attachEvent('on' + eventName, function() {
-                handler.call(el);
-            });
-        }
+;
+(function(root, blazy) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD. Register bLazy as an anonymous module
+        define(blazy);
+    } else if (typeof exports === 'object') {
+        // Node. Does not work with strict CommonJS, but
+        // only CommonJS-like environments that support module.exports,
+        // like Node.
+        module.exports = blazy();
+    } else {
+        // Browser globals. Register bLazy on window
+        root.Blazy = blazy();
     }
+})(this, function() {
+    'use strict';
 
-    function init() {
-        if (initted) {
-            return
+    //private vars
+    var _source, _viewport, _isRetina, _attrSrc = 'src',
+        _attrSrcset = 'srcset';
+
+    // constructor
+    return function Blazy(options) {
+        //IE7- fallback for missing querySelectorAll support
+        if (!document.querySelectorAll) {
+            var s = document.createStyleSheet();
+            document.querySelectorAll = function(r, c, i, j, a) {
+                a = document.all, c = [], r = r.replace(/\[for\b/gi, '[htmlFor').split(',');
+                for (i = r.length; i--;) {
+                    s.addRule(r[i], 'k:v');
+                    for (j = a.length; j--;) a[j].currentStyle.k && c.push(a[j]);
+                    s.removeRule(0);
+                }
+                return c;
+            };
+        }
+
+        //options and helper vars
+        var scope = this;
+        var util = scope._util = {};
+        util.elements = [];
+        util.destroyed = true;
+        scope.options = options || {};
+        scope.options.error = scope.options.error || false;
+        scope.options.offset = scope.options.offset || 100;
+        scope.options.success = scope.options.success || false;
+        scope.options.selector = scope.options.selector || '.b-lazy';
+        scope.options.separator = scope.options.separator || '|';
+        scope.options.container = scope.options.container ? document.querySelectorAll(scope.options.container) : false;
+        scope.options.errorClass = scope.options.errorClass || 'b-error';
+        scope.options.breakpoints = scope.options.breakpoints || false; // obsolete
+        scope.options.loadInvisible = scope.options.loadInvisible || false;
+        scope.options.successClass = scope.options.successClass || 'b-loaded';
+        scope.options.validateDelay = scope.options.validateDelay || 25;
+        scope.options.saveViewportOffsetDelay = scope.options.saveViewportOffsetDelay || 50;
+        scope.options.srcset = scope.options.srcset || 'data-srcset';
+        scope.options.src = _source = scope.options.src || 'data-src';
+        _isRetina = window.devicePixelRatio > 1;
+        _viewport = {};
+        _viewport.top = 0 - scope.options.offset;
+        _viewport.left = 0 - scope.options.offset;
+
+
+        /* public functions
+         ************************************/
+        scope.revalidate = function() {
+            initialize(this);
+        };
+        scope.load = function(elements, force) {
+            var opt = this.options;
+            if (elements.length === undefined) {
+                loadElement(elements, force, opt);
+            } else {
+                each(elements, function(element) {
+                    loadElement(element, force, opt);
+                });
+            }
+        };
+        scope.destroy = function() {
+            var self = this;
+            var util = self._util;
+            if (self.options.container) {
+                each(self.options.container, function(object) {
+                    unbindEvent(object, 'scroll', util.validateT);
+                });
+            }
+            unbindEvent(window, 'scroll', util.validateT);
+            unbindEvent(window, 'resize', util.validateT);
+            unbindEvent(window, 'resize', util.saveViewportOffsetT);
+            util.count = 0;
+            util.elements.length = 0;
+            util.destroyed = true;
         };
 
-        initted = true;
-        
-        var overlay = doc.createElement('div');
-        overlay.id = "uglipop_overlay";
-        var content_fixed = doc.createElement('div');
-        content_fixed.id = 'uglipop_content_fixed';
-        var popbox = doc.createElement('div');
-        popbox.id = 'uglipop_popbox';
-        var overlay_wrapper = doc.createElement('div');
-        overlay_wrapper.id = "uglipop_overlay_wrapper";
-        var uglipop_close_button = doc.createElement('button');
-        uglipop_close_button.id = "uglipop_close_button";
-        uglipop_close_button.innerHTML = uglipop_close_button.innerHTML = '&times;';
-        uglipop_close_button.addEventListener('click',remove);
-        overlay_wrapper.appendChild(overlay);
-        content_fixed.appendChild(popbox);
-        content_fixed.appendChild(uglipop_close_button);
-        doc.body.appendChild(overlay_wrapper);
-        doc.body.appendChild(content_fixed);
-        overlay_wrapper.addEventListener('click', remove);
-        popbox.addEventListener('click', zoomIn);
-        on(w, 'keydown', function(e) {
-            //kill pop if button is ESC ;)
-            if (e.keyCode == 27) {
-                remove();
+        //throttle, ensures that we don't call the functions too often
+        util.validateT = throttle(function() {
+            validate(scope);
+        }, scope.options.validateDelay, scope);
+        util.saveViewportOffsetT = throttle(function() {
+            saveViewportOffset(scope.options.offset);
+        }, scope.options.saveViewportOffsetDelay, scope);
+        saveViewportOffset(scope.options.offset);
+
+        //handle multi-served image src (obsolete)
+        each(scope.options.breakpoints, function(object) {
+            if (object.width >= window.screen.width) {
+                _source = object.src;
+                return false;
             }
         });
 
+        // start lazy load
+        setTimeout(function() {
+            initialize(scope);
+        }); // "dom ready" fix
 
-        //create global variables
-        w.uglipop = uglipop
-        w.removeuglipop = remove
+    };
+
+
+    /* Private helper functions
+     ************************************/
+    function initialize(self) {
+        var util = self._util;
+        // First we create an array of elements to lazy load
+        util.elements = toArray(self.options.selector);
+        util.count = util.elements.length;
+        // Then we bind resize and scroll events if not already binded
+        if (util.destroyed) {
+            util.destroyed = false;
+            if (self.options.container) {
+                each(self.options.container, function(object) {
+                    bindEvent(object, 'scroll', util.validateT);
+                });
+            }
+            bindEvent(window, 'resize', util.saveViewportOffsetT);
+            bindEvent(window, 'resize', util.validateT);
+            bindEvent(window, 'scroll', util.validateT);
+        }
+        // And finally, we start to lazy load.
+        validate(self);
     }
 
-    function uglipop(config) {
-
-        if (config) {
-            if (typeof config.class == 'string' && config.class) {
-                doc.getElementById('uglipop_popbox').setAttribute('class', config.class);
-            }
-
-            if (typeof config.content == 'string' && config.content && config.source == 'html') {
-                doc.getElementById('uglipop_popbox').innerHTML = config.content;
-            }
-
-            if (typeof config.content == 'string' && config.content && config.source == 'div') {
-
-                doc.getElementById('uglipop_popbox').innerHTML = doc.getElementById(config.content).innerHTML;
-
+    function validate(self) {
+        var util = self._util;
+        for (var i = 0; i < util.count; i++) {
+            var element = util.elements[i];
+            if (elementInView(element) || hasClass(element, self.options.successClass)) {
+                self.load(element);
+                util.elements.splice(i, 1);
+                util.count--;
+                i--;
             }
         }
-
-        doc.getElementById('html').className="js popped";
-
-
+        if (util.count === 0) {
+            self.destroy();
+        }
     }
 
-    function remove() {
-        doc.getElementById('html').className="js";
-        zoomOut();
+    function elementInView(ele) {
+        var rect = ele.getBoundingClientRect();
+        return (
+            // Intersection
+            rect.right >= _viewport.left && rect.bottom >= _viewport.top && rect.left <= _viewport.right && rect.top <= _viewport.bottom
+        );
     }
 
-    function zoomIn() {
-        console.log('zoomIn');
-        doc.getElementById('uglipop_content_fixed').className = "zoomed";
-        doc.getElementById('uglipop_popbox').removeEventListener('click',zoomIn);
-        doc.getElementById('uglipop_popbox').addEventListener('click',function(){
-            zoomOut();
-        })
+    function loadElement(ele, force, options) {
+        // if element is visible, not loaded or forced
+        if (!hasClass(ele, options.successClass) && (force || options.loadInvisible || (ele.offsetWidth > 0 && ele.offsetHeight > 0))) {
+            var dataSrc = ele.getAttribute(_source) || ele.getAttribute(options.src); // fallback to default 'data-src'
+            if (dataSrc) {
+                var dataSrcSplitted = dataSrc.split(options.separator);
+                var src = dataSrcSplitted[_isRetina && dataSrcSplitted.length > 1 ? 1 : 0];
+                var isImage = equal(ele, 'img');
+                // Image or background image
+                if (isImage || ele.src === undefined) {
+                    var img = new Image();
+                    // using EventListener instead of onerror and onload
+                    // due to bug introduced in chrome v50 
+                    // (https://productforums.google.com/forum/#!topic/chrome/p51Lk7vnP2o)
+                    var onErrorHandler = function() {
+                        if (options.error) options.error(ele, "invalid");
+                        addClass(ele, options.errorClass);
+                        unbindEvent(img, 'error', onErrorHandler);
+                        unbindEvent(img, 'load', onLoadHandler);
+                    };
+                    var onLoadHandler = function() {
+                        // Is element an image
+                        if (isImage) {
+                            setSrc(ele, src); //src
+                            handleSource(ele, _attrSrcset, options.srcset); //srcset
+                            //picture element
+                            var parent = ele.parentNode;
+                            if (parent && equal(parent, 'picture')) {
+                                each(parent.getElementsByTagName('source'), function(source) {
+                                    handleSource(source, _attrSrcset, options.srcset);
+                                });
+                            }
+                        // or background-image
+                        } else {
+                            ele.style.backgroundImage = 'url("' + src + '")';
+                        }
+                        itemLoaded(ele, options);
+                        unbindEvent(img, 'load', onLoadHandler);
+                        unbindEvent(img, 'error', onErrorHandler);
+                    };
+                    bindEvent(img, 'error', onErrorHandler);
+                    bindEvent(img, 'load', onLoadHandler);
+                    setSrc(img, src); //preload
+                } else { // An item with src like iframe, unity, simpelvideo etc
+                    setSrc(ele, src);
+                    itemLoaded(ele, options);
+                }
+            } else {
+                // video with child source
+                if (equal(ele, 'video')) {
+                    each(ele.getElementsByTagName('source'), function(source) {
+                        handleSource(source, _attrSrc, options.src);
+                    });
+                    ele.load();
+                    itemLoaded(ele, options);
+                } else {
+                    if (options.error) options.error(ele, "missing");
+                    addClass(ele, options.errorClass);
+                }
+            }
+        }
     }
 
-    function zoomOut() {
-        console.log('zoomOut')
-        doc.getElementById('uglipop_content_fixed').className = "";
-        doc.getElementById('uglipop_popbox').removeEventListener('click',zoomOut)
-        doc.getElementById('uglipop_popbox').addEventListener('click',function(){
-            zoomIn();
-        })
+    function itemLoaded(ele, options) {
+        addClass(ele, options.successClass);
+        if (options.success) options.success(ele);
+        // cleanup markup, remove data source attributes
+        ele.removeAttribute(options.src);
+        each(options.breakpoints, function(object) {
+            ele.removeAttribute(object.src);
+        });
     }
 
-    //init on window loaded
-    on(doc, "DOMContentLoaded", init)
-    on(doc, "load", init)
-})(window, document)
+    function setSrc(ele, src) {
+        ele[_attrSrc] = src;
+    }
+
+    function handleSource(ele, attr, dataAttr) {
+        var dataSrc = ele.getAttribute(dataAttr);
+        if (dataSrc) {
+            ele[attr] = dataSrc;
+            ele.removeAttribute(dataAttr);
+        }
+    }
+
+    function equal(ele, str) {
+        return ele.nodeName.toLowerCase() === str;
+    }
+
+    function hasClass(ele, className) {
+        return (' ' + ele.className + ' ').indexOf(' ' + className + ' ') !== -1;
+    }
+
+    function addClass(ele, className) {
+        if (!hasClass(ele, className)) {
+            ele.className += ' ' + className;
+        }
+    }
+
+    function toArray(selector) {
+        var array = [];
+        var nodelist = document.querySelectorAll(selector);
+        for (var i = nodelist.length; i--; array.unshift(nodelist[i])) {}
+        return array;
+    }
+
+    function saveViewportOffset(offset) {
+        _viewport.bottom = (window.innerHeight || document.documentElement.clientHeight) + offset;
+        _viewport.right = (window.innerWidth || document.documentElement.clientWidth) + offset;
+    }
+
+    function bindEvent(ele, type, fn) {
+        if (ele.attachEvent) {
+            ele.attachEvent && ele.attachEvent('on' + type, fn);
+        } else {
+            ele.addEventListener(type, fn, false);
+        }
+    }
+
+    function unbindEvent(ele, type, fn) {
+        if (ele.detachEvent) {
+            ele.detachEvent && ele.detachEvent('on' + type, fn);
+        } else {
+            ele.removeEventListener(type, fn, false);
+        }
+    }
+
+    function each(object, fn) {
+        if (object && fn) {
+            var l = object.length;
+            for (var i = 0; i < l && fn(object[i], i) !== false; i++) {}
+        }
+    }
+
+    function throttle(fn, minDelay, scope) {
+        var lastCall = 0;
+        return function() {
+            var now = +new Date();
+            if (now - lastCall < minDelay) {
+                return;
+            }
+            lastCall = now;
+            fn.apply(scope, arguments);
+        };
+    }
+});
+// It's a lightbox oh geez
+// Hand-written by me so probably full of bugs
+var lux = {
+	
+	init: function(){
+		// Set up click event handlers
+		var images = document.querySelectorAll('.lux');
+
+		for (i=0;i<images.length;i++) {
+			addListener(images[i], 'click', function(e){
+				lux.show(e);
+			});
+		};
+	},
+	
+	show: function(e){
+
+		// Create a clone of the image that was clicked on
+		var clone = document.createElement('img');
+		clone.src = e.target.getAttribute("data-full");
+		addClass(clone, 'clone');
+
+		// Create an overlay div
+		var overlay = document.createElement('div');
+		addClass(overlay, 'overlay');
+
+		// Append the clone inside the overlay, then append the overlay to the body
+		overlay.appendChild(clone);
+		var body = document.getElementsByTagName('body')[0];
+		body.appendChild(overlay);
+
+		// Add 'overlay--open' class
+		setTimeout(function(){
+			addClass(overlay, 'overlay--open')
+		}, 10);
+
+		// Add click handlers for closing the overlay
+		addListener(overlay, 'click', function(){
+			lux.hide();
+		});
+
+		// Prevent scrolling while lightbox is open
+		var html = document.getElementById('html');
+		addClass(html, 'frozen');
+	},
+
+	hide: function(){
+		var overlay = document.querySelectorAll('.overlay')[0];
+		
+		// Remove 'overlay--open' class
+		removeClass(overlay, 'overlay--open');
+
+		setTimeout(function(){
+			overlay.parentNode.removeChild(overlay);
+			var html = document.getElementById('html');
+		}, 210);
+
+		// Restore scrolling
+		removeClass(html, 'frozen');
+	}
+}
 // Add a new class "js" to the HTML element to show that js is enabled
 document.getElementById('html').className = "js";
 
@@ -121,25 +383,8 @@ document.getElementById('html').className = "js";
 // https://github.com/dinbror/blazy
 var bLazy = new Blazy();
 
-// Set up click handlers for the lightbox
-var elements = document.querySelectorAll('.pop');
-for (i=0;i<elements.length;i++) {
-	addListener(elements[i],'click',function(e){
-		pop(e);
-	});
-};
-
-// Show a lightbox
-// http://argunner.github.io/uglipop.js/
-function pop(el){
-	var full = el.target.getAttribute("data-full");
-	console.log('full',full)
-	uglipop({
-		class:'uglipop',
-		source:'html',
-	    content:'<img src="'+full+'"></img>'
-	})
-};
+// It's time to light the lightboxes
+lux.init();
 
 // Cross-browser event listener
 // http://stackoverflow.com/a/12783362
@@ -149,9 +394,27 @@ function addListener(elem, type, fn) {
 
     } else if (elem.attachEvent) {
         elem.attachEvent("on" + type, function() {
-                                          return fn.call(elem, window.event);
-                                       });
+			return fn.call(elem, window.event);
+		});
     } else {
         elem["on" + type] = fn;
     }
+}
+
+// Add classname
+function addClass(el, cl) {
+	if (el.classList) {
+		el.classList.add(cl);
+	} else {
+		el.className += ' ' + cl;
+	}
+}
+
+// Remove classname
+function removeClass(el, cl) {
+	if (el.classList) {
+		el.classList.remove(cl);
+	} else {
+		el.className = el.className.replace(new RegExp('(^|\\b)' + cl.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+	}
 }

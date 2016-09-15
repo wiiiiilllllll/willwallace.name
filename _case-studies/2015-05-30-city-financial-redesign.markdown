@@ -21,18 +21,18 @@ This was part of a prospective redesign project for [City Financial][1], complet
 include figure.html
 type="contain"
 caption="The proposed homepage redesign"
-512="/images/2015-05-30-city-financial-redesign/homepage-512.jpg"
-1024="/images/2015-05-30-city-financial-redesign/homepage-1024.jpg"
-2048="/images/2015-05-30-city-financial-redesign/homepage-2048.jpg"
+512="/images/city-financial/homepage-512.jpg"
+1024="/images/city-financial/homepage-1024.jpg"
+2048="/images/city-financial/homepage-2048.jpg"
 %}
 
 {%
 include figure.html
 type="cover"
 caption="Full-screen navigation overlay"
-512="/images/2015-05-30-city-financial-redesign/menu-512.jpg"
-1024="/images/2015-05-30-city-financial-redesign/menu-1024.jpg"
-2048="/images/2015-05-30-city-financial-redesign/menu-2048.jpg"
+512="/images/city-financial/menu-512.jpg"
+1024="/images/city-financial/menu-1024.jpg"
+2048="/images/city-financial/menu-2048.jpg"
 %}
 
 [1]: http://cityfinancial.co.uk "City Financial"

@@ -23,9 +23,9 @@ We started with the save-the-date cards. These were designed to be printed as be
 include figure.html
 type="cover"
 caption="Early concepts for the save-the-date cards"
-512="/images/2016-07-10-lynn-and-chris/mockups-512.jpg"
-1024="/images/2016-07-10-lynn-and-chris/mockups-1024.jpg"
-2048="/images/2016-07-10-lynn-and-chris/mockups-2048.jpg"
+512="/images/lynn-and-chris/mockups-512.jpg"
+1024="/images/lynn-and-chris/mockups-1024.jpg"
+2048="/images/lynn-and-chris/mockups-2048.jpg"
 %}
 
 The rest of the wedding stationery set included the invitation, RSVP, and an information sheet. The design of these followed on from the save the dates, again using the grapes and hops illustrations and the blue & white colour scheme. Each set was assembled by hand and finished with ribbon and twine decorations.

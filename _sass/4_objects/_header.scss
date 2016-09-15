@@ -7,15 +7,6 @@
 	line-height: 1;
 	transition: font-size .3s ease;
 
-	@media only screen and (min-width: 45em) {
-		// overflow-wrap: break-word;
-		// word-wrap: break-word;
-		// -webkit-hyphens: auto;
-		// -ms-hyphens: auto;
-		// -moz-hyphens: auto;
-		// hyphens: auto;
-	}
-
 	@media only screen and (min-width: 60em) {
 		font-size: 3em;
 	}

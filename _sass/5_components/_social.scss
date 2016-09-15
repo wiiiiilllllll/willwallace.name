@@ -14,6 +14,8 @@
 		margin: 0 1em;
 
 		a:before {
+			background-repeat: no-repeat;
+			background-position: center;
 			content: '';
 			display: inline-block;
 			height: 1em;
@@ -21,29 +23,30 @@
 			width: 1em;
 		}
 
-		a,a:before {
+		a,
+		a:before {
 			vertical-align: middle;
 		}
 	}
+}
 
-	.email a:before {
-		background: url(/images/mail.svg) no-repeat center center;
-	}
+.email a:before {
+	background-image: url(/images/mail.svg);
+}
 
-	.linkedin a:before {
-		background: url(/images/linkedin.svg) no-repeat center center;
-		margin-bottom: .3em;
-	}
+.linkedin a:before {
+	background-image: url(/images/linkedin.svg);
+	margin-bottom: .3em;
+}
 
-	.twitter a:before {
-		background: url(/images/twitter.svg) no-repeat center center;
-	}
+.twitter a:before {
+	background-image: url(/images/twitter.svg);
+}
 
-	.instagram a:before {
-		background: url(/images/instagram.svg) no-repeat center center;
-	}
+.instagram a:before {
+	background-image: url(/images/instagram.svg);
+}
 
-	.lastfm a:before {
-		background: url(/images/lastfm.svg) no-repeat center center;
-	}
+.lastfm a:before {
+	background-image: url(/images/lastfm.svg);
 }
