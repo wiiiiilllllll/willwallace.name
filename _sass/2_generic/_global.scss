@@ -24,3 +24,24 @@ img {
 		display: none;
 	}
 }
+
+body:after {
+	content:'default';
+	display: block;
+	position: fixed;
+	bottom:0;
+	right:0;
+	background-color: $shark;
+	color:$paper;
+	padding:.5em;
+
+	@media only screen and (min-width: 27em) { // min 320px
+		content:'min 20';
+	}
+	@media only screen and (min-width: 45em) { // min 720px
+		content:'min 45';
+	}
+	@media only screen and (min-width: 60em) { // min 960px
+		content:'min 60';
+	}
+}

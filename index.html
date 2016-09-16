@@ -4,8 +4,8 @@ bodyclass: body--home
 ---
 {% assign items = site.case-studies | sort: 'date' | reverse %}
 {% for item in items %}
-<section class="section">
-	<div class="section__left" style="background-color: #{{item.color}}">
+<section class="section" style="color: #{{item.color}}">
+	<div class="section__left">
 		<a href="{{item.url}}" class="left__inner">
 			<h3 class="left__client">{{ item.client }}</h3>
 			<p class="left__job">{{ item.job }}</p>

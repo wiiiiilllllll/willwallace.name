@@ -2,6 +2,7 @@
 // Begins a post, contains client name, title etc
 
 .header__client {
+	color: $paper;
 	font-size: 2em;
 	letter-spacing: -0.04em;
 	line-height: 1;
@@ -10,4 +11,8 @@
 	@media only screen and (min-width: 60em) {
 		font-size: 3em;
 	}
+}
+
+.header__meta {
+	color: $paper;
 }
