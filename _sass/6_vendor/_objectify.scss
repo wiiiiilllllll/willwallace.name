@@ -1,0 +1,29 @@
+// Objectify
+// Homemade polyfill for object-fit
+
+.obj {
+	background-position: center;
+	background-repeat: no-repeat;
+	display: block;
+
+	&.post__figure--cover {
+		background-size: cover;
+	}
+
+	&.post__figure--contain {
+		background-size: contain;
+	}
+
+	img {
+		opacity: 0 !important;
+		visibility: hidden;
+	}
+}
+
+.obj-lux {
+	cursor: zoom-in;
+}
+
+.obj-wrap {
+	position: relative;
+}

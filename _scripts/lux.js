@@ -8,7 +8,12 @@ var lux = {
 
 		for (i=0;i<images.length;i++) {
 			addListener(images[i], 'click', function(e){
-				lux.show(e);
+
+				if (hasClass(e,'obj-lux')) {
+					e = e.querySelector('img');
+				};
+
+				lux.show(e.target);
 			});
 		};
 	},
@@ -17,7 +22,7 @@ var lux = {
 
 		// Create a clone of the image that was clicked on
 		var clone = document.createElement('img');
-		clone.src = e.target.getAttribute("data-full");
+		clone.src = e.getAttribute("data-full");
 		addClass(clone, 'clone');
 
 		// Create an overlay div
@@ -57,5 +62,12 @@ var lux = {
 
 		// Restore scrolling
 		removeClass(html, 'frozen');
+	},
+
+	obj: function(el) {
+		addListener(el, 'click', function(e){
+			e = el.querySelector('img');
+			lux.show(e);
+		});
 	}
 }

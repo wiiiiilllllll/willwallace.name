@@ -24,6 +24,7 @@ gulp.task('scripts', function() {
         '_scripts/vendor/*.js',
         '_scripts/utils.js',
         '_scripts/lux.js',
+        '_scripts/objectify.js',
         '_scripts/app.js'
     ])
     .pipe(concat('willwallace.js'))

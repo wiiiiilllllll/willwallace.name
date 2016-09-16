@@ -17,7 +17,7 @@ function addListener(elem, type, fn) {
 function addClass(el, cl) {
 	if (el.classList) {
 		el.classList.add(cl);
-	} else {
+	} else if (!hasClass(el, cl)) {
 		el.className += ' ' + cl;
 	}
 }
@@ -26,7 +26,12 @@ function addClass(el, cl) {
 function removeClass(el, cl) {
 	if (el.classList) {
 		el.classList.remove(cl);
-	} else {
+	} else if (hasClass(el, cl)) {
 		el.className = el.className.replace(new RegExp('(^|\\b)' + cl.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
 	}
+}
+
+// Check if element has a certain class
+function hasClass(ele, className) {
+    return (' ' + ele.className + ' ').indexOf(' ' + className + ' ') !== -1;
 }

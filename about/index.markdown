@@ -2,14 +2,15 @@
 layout: about
 color: ffc100
 ---
-Hi, I'm Will. I'm a freelance graphic designer and front-end web developer living in the South of England. I have nearly 10 years' experience in the world of creative design, including both print and web.
+## Hi, I'm Will.
+I'm a freelance graphic designer and front-end web developer living in the South of England. I have nearly 10 years' experience in the world of creative design, including both print and web.
 
 I'm equally at home using Adobe Creative Suite, or Sublime Text and Git. My background in print means I have a good eye for detail and a creative flair, while my coding experience gives me a solid understanding of the practicalities of making a design work.
 
-Away from work I love listening to and making music; I play keyboard in two bands, [Lake Of Kings](https://www.facebook.com/lakeofkings) and [Buildings On Fire](https://www.facebook.com/BuildingsOnFire).
+When I'm not at work you'll find me spending time with my amazing wife & our [two](https://www.instagram.com/p/BJINB2-hJKT/) [cats](https://www.instagram.com/p/BGgtOllPPGp/). I love listening to and making music: I play keyboard in two bands, [Lake Of Kings](https://www.facebook.com/lakeofkings) and [Buildings On Fire](https://www.facebook.com/BuildingsOnFire).
 
-### About this site
-This site is built on [Jekyll](https://jekyllrb.com), and was designed and built to be as lightweight as possible. The code is mostly hand-crafted, with the exception of a couple of third-party scripts:
+## About this site
+This site is built on [Jekyll](https://jekyllrb.com), and was designed and built to be as lightweight as possible. That meant no frameworks, no grid systems; the code is almost entirely hand-crafted, with a couple of notable exceptions:
 
  - [loadJS](https://github.com/filamentgroup/loadJS) (for – surprise! – loading JavaScript)
  - [bLazy](https://github.com/dinbror/blazy) (for lazy-loading images)
