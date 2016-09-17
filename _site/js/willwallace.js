@@ -450,7 +450,7 @@ document.getElementById('html').className = "js";
 // https://github.com/dinbror/blazy
 var bLazy = new Blazy({
 	success: function(el){
-		if (Modernizr.objectfit) {
+		if (!Modernizr.objectfit) {
 			obj(el.parentNode);
 		};
 	}

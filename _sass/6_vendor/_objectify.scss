@@ -4,11 +4,8 @@
 .obj {
 	background-position: center;
 	background-repeat: no-repeat;
+	background-size: cover;
 	display: block;
-
-	&.post__figure--cover {
-		background-size: cover;
-	}
 
 	&.post__figure--contain {
 		background-size: contain;
