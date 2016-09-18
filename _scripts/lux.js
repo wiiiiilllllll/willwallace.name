@@ -6,7 +6,7 @@ var lux = {
 		// Set up click event handlers
 		var images = document.querySelectorAll('.lux');
 
-		for (i=0;i<images.length;i++) {
+		for (i=0; i<images.length; i++) {
 			addListener(images[i], 'click', function(e){
 
 				if (hasClass(e,'obj-lux')) {

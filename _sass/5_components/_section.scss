@@ -15,7 +15,8 @@
 		.body--home & {
 			border: 0;
 			flex-flow: row nowrap;
-			min-height: 110vh;
+			height: $sectionHeight;
+			min-height: $sectionMinHeight;
 		}
 	}
 
@@ -23,7 +24,7 @@
 		.body--case-study &,
 		.body--about & {
 			flex-flow: row nowrap;
-			min-height: 110vh;
+			min-height: $sectionHeight;
 		}
 	}
 }
@@ -89,9 +90,10 @@
 	}
 
 	@media only screen and (min-width: 27em) {
-		min-height: 110vh;
 
 		.body--home & {
+			height: $sectionHeight;
+			min-height: $sectionMinHeight;
 			width: calc(50% + 1em);
 		}
 	}
@@ -109,16 +111,17 @@
 
 		@media only screen and (min-width: 27em) {
 			.body--home & {
-				height: 110vh;
+				height: $sectionHeight;
+				min-height: $sectionMinHeight;
 			}
 		}
 
 		.body--home & {
-			@include object-fit(cover);
+			object-fit: cover;
 		}
 	}
 }
 
 .section__image-link img {
-		width: 100%;
+	width: 100%;
 }
