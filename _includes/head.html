@@ -5,6 +5,7 @@
 	<title>{% if page.title %}{{page.title | escape}} | Will Wallace{% else %}{{site.title | escape}} | {{site.tagline | escape}}{% endif %}</title>
 	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 	<meta name="theme-color" content="#222225">
+	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,600' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="{{'/css/willwallace.css'}}">
 	<!--[if lt IE 9]><script src="{{'/js/html5shiv.js'}}"></script><![endif]-->
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
