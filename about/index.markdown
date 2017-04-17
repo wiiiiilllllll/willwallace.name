@@ -3,7 +3,7 @@ layout: about
 color: ffc100
 ---
 ## Hi, I'm Will.
-I'm a freelance graphic designer and front-end web developer living in the South of England. I have nearly 10 years' experience in the world of creative design, including both print and web.
+I'm a freelance graphic designer and front-end web developer living in the West Midlands. I have nearly 10 years' experience in the world of creative design, including both print and web.
 
 I'm equally at home using Adobe Creative Suite, or Sublime Text and Git. My background in print means I have a good eye for detail and a creative flair, while my coding experience gives me a solid understanding of the practicalities of making a design work.
 

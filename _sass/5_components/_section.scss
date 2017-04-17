@@ -81,6 +81,17 @@
 	color: $paper;
 }
 
+.left__client {
+	font-size: 2em;
+	line-height: 1;
+	margin-bottom: .3em;
+	transition: all .3s ease;
+
+	@media only screen and (min-width: 60em) {
+		font-size: 3em;
+	}
+}
+
 .section__right {
 	position: relative;
 

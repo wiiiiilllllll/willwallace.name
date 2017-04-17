@@ -10,6 +10,7 @@ image-1024: /images/large/dynamic-planner-1024.jpg
 image-2048: /images/large/dynamic-planner-2048.jpg
 thumbnail: /images/thumbnails/dynamic-planner.jpg
 color: 9E1B46
+sortOrder: 30
 ---
 ## The brief
 Design and development of a bespoke Wordpress theme for Distribution Technology, a financial software company.

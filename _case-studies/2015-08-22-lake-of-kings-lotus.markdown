@@ -10,6 +10,7 @@ image-1024: /images/large/lake-of-kings-lotus-1024.jpg
 image-2048: /images/large/lake-of-kings-lotus-2048.jpg
 thumbnail: /images/thumbnails/lake-of-kings-lotus.jpg
 color: 01305B
+sortOrder: 20
 ---
 ## The brief
 Cover design &amp; artwork for the album _Lotus_ by Lake Of Kings.

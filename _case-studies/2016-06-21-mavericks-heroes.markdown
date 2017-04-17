@@ -10,6 +10,7 @@ image-1024: /images/large/mavericks-heroes-1024.jpg
 image-2048: /images/large/mavericks-heroes-2048.jpg
 thumbnail: /images/thumbnails/mavericks-heroes.jpg
 color: 3E7033
+sortOrder: 40
 ---
 ## The brief
 Graphic design and brand identity for the Mavericks Brewing Company, a newly-established microbrewery based in Hampshire.

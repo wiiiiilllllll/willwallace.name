@@ -10,6 +10,7 @@ image-1024: /images/large/lipstick-on-your-collar-1024.jpg
 image-2048: /images/large/lipstick-on-your-collar-2048.jpg
 thumbnail: /images/thumbnails/lipstick-on-your-collar.jpg
 color: BD2244
+sortOrder: 70
 ---
 ## The brief
 Graphic design of posters & flyers for Lipstick On Your Collar, a 1950s and '60s rock & roll stage show. 

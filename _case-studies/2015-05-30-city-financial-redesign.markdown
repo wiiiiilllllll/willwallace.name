@@ -10,6 +10,7 @@ image-1024: /images/large/city-financial-corporate-1024.jpg
 image-2048: /images/large/city-financial-corporate-2048.jpg
 thumbnail: /images/thumbnails/city-financial-corporate.jpg
 color: 1F5177
+sortOrder: 50
 ---
 ## The brief
 Visual design for City Financial, an investment management firm based in London. 
